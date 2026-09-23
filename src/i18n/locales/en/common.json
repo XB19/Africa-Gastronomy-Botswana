@@ -1,0 +1,262 @@
+{
+  "meta": {
+    "eventName": "FIGA Botswana 2026",
+    "orgName": "Africa Gastronomy Botswana",
+    "dates": "11–14 November 2026",
+    "location": "Gaborone, Botswana"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "gastronomy": "African Gastronomy",
+    "chefs": "Chefs & Speakers",
+    "programmes": "Programmes & Competitions",
+    "countries": "Participating Countries",
+    "calendar": "Event Calendar",
+    "dashboard": "Dashboard",
+    "gallery": "Gallery",
+    "partners": "Partners & Sponsors",
+    "contact": "Contact / FAQ",
+    "register": "Register Now"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "readMore": "Read More",
+    "registerNow": "Register Now",
+    "getInvolved": "Get Involved",
+    "downloadBrochure": "Download Brochure",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds",
+    "comingSoon": "Content coming soon",
+    "backHome": "Back to Home",
+    "placeholderNote": "Placeholder content — to be finalised via the CMS.",
+    "language": "Language"
+  },
+  "header": {
+    "topbar": "Gaborone, Botswana · 11–14 November 2026",
+    "cta": "Register Now"
+  },
+  "footer": {
+    "about": "Africa Gastronomy Botswana celebrates the richness of African culinary heritage — bringing together chefs, speakers, competitors and food lovers from across the continent and beyond.",
+    "quickLinks": "Quick Links",
+    "explore": "Explore",
+    "contact": "Contact",
+    "newsletter": "Stay Updated",
+    "newsletterText": "Subscribe for programme updates, chef announcements and registration news.",
+    "emailPlaceholder": "Your email address",
+    "subscribe": "Subscribe",
+    "rights": "All rights reserved.",
+    "address": "Gaborone International Convention Centre, Gaborone, Botswana",
+    "email": "info@africagastronomybotswana.com",
+    "phone": "+267 000 0000"
+  },
+  "home": {
+    "hero": {
+      "kicker": "11–14 November 2026 · Gaborone, Botswana",
+      "title": "Africa Gastronomy Botswana",
+      "titleAccent": "FIGA 2026",
+      "subtitle": "Four days celebrating African culinary heritage — chefs, competitions, masterclasses and the flavours of a continent, hosted for the first time in Gaborone.",
+      "ctaPrimary": "Register Now",
+      "ctaSecondary": "Explore the Programme",
+      "countdownLabel": "Counting down to FIGA Botswana 2026"
+    },
+    "intro": {
+      "kicker": "Who We Are",
+      "title": "Africa Gastronomy Botswana",
+      "text": "Africa Gastronomy Botswana is a platform dedicated to showcasing and promoting African gastronomy — celebrating Botswana's culinary heritage alongside the traditions, chefs and ingredients of the wider continent. Through competitions, masterclasses, exhibitions and cultural exchange, we bring Africa's food story to the world stage.",
+      "stat1Value": "20+",
+      "stat1Label": "Participating Countries",
+      "stat2Value": "50+",
+      "stat2Label": "Chefs & Speakers",
+      "stat3Value": "4",
+      "stat3Label": "Days of Programming",
+      "stat4Value": "1st",
+      "stat4Label": "Edition in Botswana"
+    },
+    "visionMission": {
+      "kicker": "Our Purpose",
+      "title": "Vision & Mission",
+      "visionTitle": "Our Vision",
+      "visionText": "A continent where African gastronomy is celebrated, preserved and recognised on the global culinary stage — driving pride, tourism and opportunity across Africa.",
+      "missionTitle": "Our Mission",
+      "missionText": "To create a premier platform that showcases African culinary heritage, empowers chefs and hospitality talent, and connects countries, communities and industry through the shared language of food."
+    },
+    "activities": {
+      "kicker": "What's On",
+      "title": "Featured Activities",
+      "subtitle": "A programme built for chefs, industry professionals and food lovers alike.",
+      "items": [
+        { "title": "Culinary Competitions", "text": "Chefs compete across categories judged by an international panel." },
+        { "title": "Masterclasses", "text": "Hands-on sessions led by celebrated chefs and culinary educators." },
+        { "title": "Exhibition Stalls", "text": "Producers, brands and partners showcase products and innovation." },
+        { "title": "Gala Dinner", "text": "A signature evening celebrating African flavours in style." },
+        { "title": "Cultural Showcases", "text": "Music, dance and heritage performances celebrating the participating countries." }
+      ]
+    },
+    "programmes": {
+      "kicker": "Programme",
+      "title": "Programmes & Competitions",
+      "subtitle": "From masterclasses to flagship competitions — explore what's on at FIGA Botswana 2026.",
+      "cta": "View Full Programme"
+    },
+    "countries": {
+      "kicker": "United by Flavour",
+      "title": "Participating Countries",
+      "subtitle": "Chefs and delegations from across Africa and beyond are confirming their participation.",
+      "cta": "View All Countries"
+    },
+    "chefs": {
+      "kicker": "Talent",
+      "title": "Chefs & Speakers",
+      "subtitle": "Meet the culinary leaders, competitors and speakers shaping the FIGA Botswana programme.",
+      "cta": "Meet the Chefs & Speakers"
+    },
+    "dashboard": {
+      "kicker": "Live Overview",
+      "title": "Interactive Event Dashboard",
+      "subtitle": "A snapshot of FIGA Botswana 2026 as the countdown continues.",
+      "cta": "Open Full Dashboard"
+    },
+    "gallery": {
+      "kicker": "Moments",
+      "title": "Gallery",
+      "subtitle": "A taste of the flavours, faces and moments from Africa Gastronomy events.",
+      "cta": "View Full Gallery"
+    },
+    "partners": {
+      "kicker": "With Thanks To",
+      "title": "Partners & Sponsors",
+      "subtitle": "FIGA Botswana 2026 is made possible with the support of our partners.",
+      "cta": "Become a Partner"
+    },
+    "registerCta": {
+      "title": "Be Part of FIGA Botswana 2026",
+      "text": "Secure your place at the Gala Dinner, register for a competition, book a masterclass, or bring your brand as an exhibitor or sponsor.",
+      "cta": "Start Your Registration"
+    }
+  },
+  "about": {
+    "hero": { "kicker": "About Us", "title": "About Africa Gastronomy Botswana" },
+    "intro": { "title": "Our Story", "text": "Africa Gastronomy Botswana was founded to give African culinary heritage the stage it deserves — connecting chefs, communities, institutions and industry through a shared celebration of food. FIGA Botswana 2026 marks our flagship event, hosted in Gaborone." },
+    "vision": { "title": "Vision", "text": "A continent where African gastronomy is celebrated, preserved and recognised on the global culinary stage." },
+    "mission": { "title": "Mission", "text": "To create a premier platform that showcases African culinary heritage, empowers chefs and hospitality talent, and connects countries and communities through food." },
+    "objectives": {
+      "title": "Objectives",
+      "items": [
+        "Promote and preserve Botswana's and Africa's culinary heritage",
+        "Provide a platform for chefs, speakers and hospitality talent to shine",
+        "Foster cultural exchange between participating countries",
+        "Support tourism, trade and investment through gastronomy",
+        "Deliver a professional, world-class event experience in Gaborone"
+      ]
+    },
+    "leadership": { "title": "Leadership", "text": "Africa Gastronomy Botswana is guided by a dedicated organising team and advisory board drawn from the hospitality, culinary and events industries." }
+  },
+  "gastronomy": {
+    "hero": { "kicker": "African Gastronomy", "title": "A Continent of Flavour" },
+    "heritage": { "title": "Botswana's Culinary Heritage", "text": "Botswana's cuisine reflects its land and its people — from seswaa and bogobe to morogo and dried mopane worms, each dish carries the story of community, resilience and celebration." },
+    "traditional": { "title": "Traditional Cuisine", "text": "Across the continent, traditional cooking techniques — open-fire grilling, slow stewing, fermentation and communal preparation — remain at the heart of African gastronomy." },
+    "ingredients": { "title": "Indigenous Ingredients", "text": "Sorghum, millet, indigenous greens, wild fruits and free-range meats form the backbone of dishes that are as nutritious as they are flavourful." },
+    "initiatives": { "title": "African Gastronomy Initiatives", "text": "FIGA Botswana champions initiatives that document, preserve and elevate African culinary traditions — from community cookbooks to chef mentorship programmes." }
+  },
+  "chefsPage": {
+    "hero": { "kicker": "Our Chefs & Speakers", "title": "Meet the Culinary Leaders of FIGA Botswana" },
+    "intro": "Chef and speaker profiles will be announced progressively as FIGA Botswana 2026 approaches. Each profile will include a photograph, biography, areas of expertise and achievements.",
+    "placeholderRole": "Chef Profile",
+    "cta": "Apply to Speak or Compete"
+  },
+  "programmesPage": {
+    "hero": { "kicker": "Programmes & Competitions", "title": "The FIGA Botswana 2026 Programme" },
+    "intro": "Explore masterclasses, flagship competitions and exhibition opportunities. Full schedules and judging criteria will be published as they are confirmed.",
+    "categoriesTitle": "Registration Categories",
+    "tabs": { "masterclasses": "Masterclasses", "competitions": "Competitions", "exhibitions": "Exhibition Stalls" }
+  },
+  "galleryPage": {
+    "hero": { "kicker": "Gallery", "title": "Flavours, Faces & Moments" },
+    "filters": { "all": "All", "food": "Food", "kitchen": "Behind the Scenes", "events": "Events" }
+  },
+  "partnersPage": {
+    "hero": { "kicker": "Partners & Sponsors", "title": "Our Partners & Sponsors" },
+    "intro": "FIGA Botswana 2026 is proud to work alongside partner organisations, supporting institutions and sponsors who champion African gastronomy.",
+    "tiers": { "title": "Sponsorship Tiers", "text": "Sponsorship packages are available across multiple tiers, offering visibility, hospitality and activation opportunities throughout the event." },
+    "portalCta": "Sponsor Portal — Coming Soon",
+    "becomePartner": "Become a Partner"
+  },
+  "countriesPage": {
+    "hero": { "kicker": "Participating Countries", "title": "United Across the Continent" },
+    "intro": "Delegations, chefs and exhibitors from across Africa — and friends of African gastronomy worldwide — are joining FIGA Botswana 2026."
+  },
+  "calendarPage": {
+    "hero": { "kicker": "Event Calendar", "title": "FIGA Botswana 2026 Schedule" },
+    "intro": "A day-by-day look at masterclasses, competitions and signature events across the four days of FIGA Botswana 2026."
+  },
+  "dashboardPage": {
+    "hero": { "kicker": "Interactive Dashboard", "title": "FIGA Botswana 2026 at a Glance" },
+    "intro": "Live-style overview of registrations, countries and programme activity — connected to real data as the CMS is populated."
+  },
+  "contactPage": {
+    "hero": { "kicker": "Contact / FAQ", "title": "Get in Touch" },
+    "formTitle": "Send Us a Message",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message"
+    },
+    "faqTitle": "Frequently Asked Questions",
+    "detailsTitle": "Contact Details",
+    "mapTitle": "Location"
+  },
+  "register": {
+    "steps": {
+      "programme": "Programme",
+      "details": "Your Details",
+      "category": "Category",
+      "summary": "Summary",
+      "payment": "Payment",
+      "confirmation": "Confirmation"
+    },
+    "programme": {
+      "title": "Choose What You're Registering For",
+      "subtitle": "Select a programme to begin your registration for FIGA Botswana 2026."
+    },
+    "details": {
+      "title": "Your Details",
+      "subtitle": "Tell us who's registering.",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "country": "Country",
+      "organisation": "Organisation (optional)",
+      "next": "Continue to Category"
+    },
+    "category": {
+      "title": "Select Your Category",
+      "subtitle": "Choose the package that suits you.",
+      "next": "Continue to Summary"
+    },
+    "summary": {
+      "title": "Review Your Registration",
+      "subtitle": "Please confirm your details before proceeding to payment.",
+      "edit": "Edit",
+      "next": "Continue to Payment"
+    },
+    "payment": {
+      "title": "Payment",
+      "subtitle": "Secure payment processing will be enabled closer to the event.",
+      "next": "Confirm Registration"
+    },
+    "confirmation": {
+      "title": "You're Registered!",
+      "subtitle": "Thank you for registering for FIGA Botswana 2026. A confirmation has been sent to your email.",
+      "reference": "Registration Reference",
+      "cta": "Back to Home"
+    },
+    "back": "Back"
+  }
+}
