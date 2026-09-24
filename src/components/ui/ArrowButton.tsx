@@ -15,7 +15,7 @@ export function ArrowButton({ className = "", variant = "solid" }: ArrowButtonPr
           : "border border-ink-800/20 text-ink-800 group-hover:border-primary-500 group-hover:bg-primary-500 group-hover:text-white"
       } ${className}`}
     >
-      <FontAwesomeIcon icon={icons.arrowRight} className="text-xs transition-transform duration-200 group-hover:translate-x-0.5" />
+      <FontAwesomeIcon icon={icons.arrowRight} className="text-xs transition-transform duration-200 group-hover:translate-x-1" />
     </span>
   );
 }

@@ -5,6 +5,7 @@ import { SectionHeading } from "../../components/ui/SectionHeading";
 import { LinkButton } from "../../components/ui/Button";
 import { paths } from "../../router/paths";
 import { foodImages, pick } from "../../lib/images";
+import { Stagger } from "../../components/motion";
 
 export function GalleryPreview() {
   const { t } = useTranslation();
@@ -25,20 +26,21 @@ export function GalleryPreview() {
         </div>
       </Container>
 
-      <div className="mt-10 grid grid-cols-2 sm:grid-cols-4">
+      <Stagger className="mt-10 grid grid-cols-2 sm:grid-cols-4" step={0.06}>
         {images.map((src, i) => (
             <div
               key={i}
-              className={`group overflow-hidden ${i % 5 === 0 ? "sm:col-span-2 sm:row-span-2" : ""}`}
+              className={`group relative overflow-hidden ${i % 5 === 0 ? "sm:col-span-2 sm:row-span-2" : ""}`}
             >
               <img
                 src={src}
                 alt="Africa Gastronomy dish"
-                className="h-full max-h-72 w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="h-full max-h-72 w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
               />
+              <div className="pointer-events-none absolute inset-0 bg-primary-900/0 transition-colors duration-500 group-hover:bg-primary-900/25" />
             </div>
           ))}
-      </div>
+      </Stagger>
     </section>
   );
 }

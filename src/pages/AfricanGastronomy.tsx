@@ -4,6 +4,7 @@ import { icons } from "../lib/icons";
 import { PageHero } from "../components/ui/PageHero";
 import { Container } from "../components/ui/Container";
 import { foodImages, pick } from "../lib/images";
+import { Reveal, Stagger } from "../components/motion";
 
 const sections = [
   { key: "heritage", icon: icons.earthAfrica },
@@ -32,12 +33,14 @@ export default function AfricanGastronomy() {
                 i % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
               }`}
             >
-              <img
-                src={pick(foodImages, i * 6 + 2)}
-                alt={t(`gastronomy.${section.key}.title`)}
-                className="aspect-[4/3] w-full object-cover"
-              />
-              <div className="flex flex-col gap-4">
+              <Reveal className="overflow-hidden">
+                <img
+                  src={pick(foodImages, i * 6 + 2)}
+                  alt={t(`gastronomy.${section.key}.title`)}
+                  className="aspect-[4/3] w-full object-cover transition-transform duration-[1.2s] ease-out hover:scale-105"
+                />
+              </Reveal>
+              <Reveal delay={0.15} className="flex flex-col gap-4">
                 <span className="flex h-12 w-12 items-center justify-center bg-primary-50 text-primary-600">
                   <FontAwesomeIcon icon={section.icon} className="text-xl" />
                 </span>
@@ -45,7 +48,7 @@ export default function AfricanGastronomy() {
                   {t(`gastronomy.${section.key}.title`)}
                 </h2>
                 <p className="leading-relaxed text-ink-500">{t(`gastronomy.${section.key}.text`)}</p>
-              </div>
+              </Reveal>
             </div>
           ))}
         </Container>
@@ -53,16 +56,16 @@ export default function AfricanGastronomy() {
 
       <section className="bg-surface-200/50 py-16">
         <Container>
-          <div className="grid grid-cols-3 gap-3 sm:grid-cols-6">
+          <Stagger step={0.04} className="grid grid-cols-3 gap-3 sm:grid-cols-6">
             {Array.from({ length: 12 }).map((_, i) => (
               <img
                 key={i}
                 src={pick(foodImages, i)}
                 alt=""
-                className="aspect-square w-full object-cover"
+                className="aspect-square w-full object-cover transition-transform duration-500 hover:scale-[1.04]"
               />
             ))}
-          </div>
+          </Stagger>
         </Container>
       </section>
     </>

@@ -11,6 +11,7 @@ import { paths } from "../router/paths";
 import { programmes, type ProgrammeType } from "../data/programmes";
 import { registrationCategories, categoryIconMap } from "../data/categories";
 import { kitchenImages, pick } from "../lib/images";
+import { Stagger } from "../components/motion";
 
 const tabs: { key: ProgrammeType; labelKey: string }[] = [
   { key: "masterclass", labelKey: "programmesPage.tabs.masterclasses" },
@@ -38,9 +39,9 @@ export default function Programmes() {
               <button
                 key={tab.key}
                 onClick={() => setActive(tab.key)}
-                className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-colors ${
+                className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-200 active:scale-95 ${
                   active === tab.key
-                    ? "bg-primary-500 text-white"
+                    ? "bg-primary-500 text-white shadow-md shadow-primary-900/20"
                     : "bg-white text-ink-600 border border-ink-800/10 hover:border-primary-300"
                 }`}
               >
@@ -74,11 +75,11 @@ export default function Programmes() {
       <section className="bg-surface-200/50 py-16 sm:py-20">
         <Container className="flex flex-col gap-12">
           <SectionHeading title={t("programmesPage.categoriesTitle")} align="center" className="mx-auto" />
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <Stagger step={0.1} className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {registrationCategories.map((cat) => (
               <div
                 key={cat.id}
-                className={`flex flex-col gap-4 border p-7 ${
+                className={`flex flex-col gap-4 border p-7 transition-[border-color,box-shadow,translate] duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-ink-900/8 ${
                   cat.featured
                     ? "border-primary-400 bg-ink-800 text-surface-50"
                     : "border-ink-800/8 bg-white"
@@ -117,7 +118,7 @@ export default function Programmes() {
                 </LinkButton>
               </div>
             ))}
-          </div>
+          </Stagger>
         </Container>
       </section>
     </>

@@ -9,6 +9,7 @@ import { countries } from "../data/countries";
 import { chefProfiles } from "../data/chefs";
 import { registrationCategories } from "../data/categories";
 import { kitchenImages, pick } from "../lib/images";
+import { CountUp, ProgressBar, Stagger } from "../components/motion";
 
 const breakdown = [
   { label: "Masterclasses", count: programmes.filter((p) => p.type === "masterclass").length, color: "bg-primary-500" },
@@ -40,24 +41,24 @@ export default function DashboardPage() {
 
       <section className="py-16 sm:py-20">
         <Container className="flex flex-col gap-10">
-          <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
+          <Stagger className="grid grid-cols-2 gap-6 lg:grid-cols-4">
             {topStats.map((stat) => (
-              <div key={stat.label} className="border border-ink-800/8 bg-white p-6">
+              <div key={stat.label} className="border border-ink-800/8 bg-white p-6 transition-[border-color,box-shadow,translate] duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-ink-900/8">
                 <span className="flex h-11 w-11 items-center justify-center bg-primary-50 text-primary-600">
                   <FontAwesomeIcon icon={stat.icon} />
                 </span>
-                <span className="mt-4 block font-display text-3xl font-bold text-ink-800">{stat.value}</span>
+                <CountUp value={stat.value} className="mt-4 block font-display text-3xl font-bold text-ink-800" />
                 <span className="text-xs font-medium uppercase tracking-wide text-ink-400">{stat.label}</span>
               </div>
             ))}
-          </div>
+          </Stagger>
 
-          <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+          <Stagger step={0.12} className="grid grid-cols-1 gap-6 lg:grid-cols-3">
             <div className="border border-ink-800/8 bg-white p-7 lg:col-span-2">
               <p className="text-sm font-semibold text-ink-500">Programme Mix</p>
               <div className="mt-4 flex h-4 w-full overflow-hidden rounded-full bg-ink-800/8">
                 {breakdown.map((b) => (
-                  <div key={b.label} className={b.color} style={{ width: `${(b.count / breakdownTotal) * 100}%`}} />
+                  <ProgressBar key={b.label} className={b.color} percent={(b.count / breakdownTotal) * 100} />
                 ))}
               </div>
               <div className="mt-4 flex flex-wrap gap-x-8 gap-y-2">
@@ -81,7 +82,7 @@ export default function DashboardPage() {
                 ))}
               </div>
             </div>
-          </div>
+          </Stagger>
 
           <div className="border border-dashed border-ink-800/15 bg-surface-200/50 p-8 text-center text-sm text-ink-400">
             Live registration counts, ticket sales and real-time delegate numbers will populate this dashboard

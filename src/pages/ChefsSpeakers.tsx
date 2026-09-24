@@ -8,6 +8,7 @@ import { LinkButton } from "../components/ui/Button";
 import { paths } from "../router/paths";
 import { chefProfiles } from "../data/chefs";
 import { kitchenImages, pick } from "../lib/images";
+import { Stagger } from "../components/motion";
 
 export default function ChefsSpeakers() {
   const { t } = useTranslation();
@@ -28,17 +29,17 @@ export default function ChefsSpeakers() {
             {t("common.placeholderNote")}
           </div>
 
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <Stagger step={0.1} className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {chefProfiles.map((chef) => (
               <div
                 key={chef.id}
-                className="group overflow-hidden border border-ink-800/8 bg-white transition-colors hover:border-primary-300"
+                className="group overflow-hidden border border-ink-800/8 bg-white transition-[border-color,box-shadow,translate] duration-300 hover:-translate-y-1.5 hover:border-primary-300 hover:shadow-2xl hover:shadow-ink-900/10"
               >
                 <div className="relative overflow-hidden">
                   <img
                     src={chef.image}
                     alt={chef.role}
-                    className="aspect-[4/5] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="aspect-[4/5] w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
                   />
                   <Badge className="absolute left-4 top-4 bg-white/90">{chef.category}</Badge>
                 </div>
@@ -47,7 +48,7 @@ export default function ChefsSpeakers() {
                   <p className="text-sm text-ink-400">
                     Biography, areas of expertise and achievements to be published.
                   </p>
-                  <div className="mt-2 flex gap-3 text-ink-300">
+                  <div className="mt-2 flex gap-3 text-ink-300 [&>svg]:transition-colors [&>svg:hover]:text-primary-500">
                     <FontAwesomeIcon icon={icons.instagram} />
                     <FontAwesomeIcon icon={icons.linkedin} />
                     <FontAwesomeIcon icon={icons.x} />
@@ -55,7 +56,7 @@ export default function ChefsSpeakers() {
                 </div>
               </div>
             ))}
-          </div>
+          </Stagger>
 
           <div className="mx-auto mt-4 flex flex-col items-center gap-4 text-center">
             <p className="text-ink-500">Are you a chef, speaker or industry judge?</p>

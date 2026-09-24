@@ -8,6 +8,7 @@ import { paths } from "../../router/paths";
 import { programmes } from "../../data/programmes";
 import { countries } from "../../data/countries";
 import { chefProfiles } from "../../data/chefs";
+import { CountUp, ProgressBar, Stagger } from "../../components/motion";
 
 const stats = [
   { icon: icons.users, label: "Chefs & Speakers Confirmed", value: chefProfiles.length, target: 50 },
@@ -39,19 +40,16 @@ export function DashboardSection() {
           </LinkButton>
         </div>
 
-        <div className="grid grid-cols-1 gap-px bg-ink-800/8 lg:grid-cols-3">
+        <Stagger className="grid grid-cols-1 gap-px bg-ink-800/8 lg:grid-cols-3">
           {stats.map((stat) => (
-            <div key={stat.label} className="bg-white p-7">
+            <div key={stat.label} className="group relative transition-shadow duration-300 hover:z-10 hover:shadow-2xl hover:shadow-ink-900/10 bg-white p-7">
               <div className="flex items-center justify-between">
                 <FontAwesomeIcon icon={stat.icon} className="text-lg text-primary-500" />
-                <span className="font-display text-3xl font-bold text-ink-800">{stat.value}</span>
+                <CountUp value={stat.value} className="font-display text-3xl font-bold text-ink-800" />
               </div>
               <p className="mt-4 text-sm font-semibold text-ink-500">{stat.label}</p>
               <div className="mt-3 h-1 w-full overflow-hidden bg-ink-800/8">
-                <div
-                  className="h-full bg-primary-500"
-                  style={{ width: `${Math.min(100, (stat.value / stat.target) * 100)}%`}}
-                />
+                <ProgressBar className="h-full bg-primary-500" percent={Math.min(100, (stat.value / stat.target) * 100)} />
               </div>
             </div>
           ))}
@@ -60,11 +58,7 @@ export function DashboardSection() {
             <p className="text-sm font-semibold text-ink-500">Programme Mix</p>
             <div className="mt-4 flex h-3 w-full overflow-hidden bg-ink-800/8">
               {breakdown.map((b) => (
-                <div
-                  key={b.label}
-                  className={b.color}
-                  style={{ width: `${(b.count / breakdownTotal) * 100}%`}}
-                />
+                <ProgressBar key={b.label} className={b.color} percent={(b.count / breakdownTotal) * 100} />
               ))}
             </div>
             <div className="mt-4 flex flex-wrap gap-x-8 gap-y-2">
@@ -76,7 +70,7 @@ export function DashboardSection() {
               ))}
             </div>
           </div>
-        </div>
+        </Stagger>
       </Container>
     </section>
   );

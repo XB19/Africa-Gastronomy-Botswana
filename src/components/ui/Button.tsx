@@ -9,9 +9,9 @@ type Size = "sm" | "md" | "lg";
 
 const variantClasses: Record<Variant, string> = {
   primary:
-    "bg-primary-500 text-white hover:bg-primary-600 shadow-sm shadow-primary-900/20",
+    "bg-primary-500 text-white hover:bg-primary-600 shadow-sm shadow-primary-900/20 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary-900/25",
   secondary:
-    "bg-ink-800 text-surface-50 hover:bg-ink-700",
+    "bg-ink-800 text-surface-50 hover:bg-ink-700 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-ink-900/20",
   outline:
     "border border-ink-800/20 text-ink-800 hover:border-primary-500 hover:text-primary-600",
   ghost: "text-ink-800 hover:text-primary-600",
@@ -33,7 +33,7 @@ interface BaseProps {
 }
 
 const base =
-  "inline-flex items-center justify-center gap-2.5 font-semibold tracking-wide transition-all duration-200 disabled:opacity-50 disabled:pointer-events-none";
+  "group/btn inline-flex items-center justify-center gap-2.5 font-semibold tracking-wide transition-all duration-200 active:translate-y-0 active:scale-[0.97] disabled:opacity-50 disabled:pointer-events-none";
 
 export const Button = forwardRef<
   HTMLButtonElement,
@@ -50,7 +50,9 @@ export const Button = forwardRef<
     >
       {icon && iconPosition === "left" && <FontAwesomeIcon icon={icon} className="text-[0.9em]" />}
       {children}
-      {icon && iconPosition === "right" && <FontAwesomeIcon icon={icon} className="text-[0.9em]" />}
+      {icon && iconPosition === "right" && (
+        <FontAwesomeIcon icon={icon} className="text-[0.9em] transition-transform duration-200 group-hover/btn:translate-x-1" />
+      )}
     </button>
   );
 });
@@ -72,7 +74,9 @@ export function LinkButton({
     <>
       {icon && iconPosition === "left" && <FontAwesomeIcon icon={icon} className="text-[0.9em]" />}
       {children}
-      {icon && iconPosition === "right" && <FontAwesomeIcon icon={icon} className="text-[0.9em]" />}
+      {icon && iconPosition === "right" && (
+        <FontAwesomeIcon icon={icon} className="text-[0.9em] transition-transform duration-200 group-hover/btn:translate-x-1" />
+      )}
     </>
   );
 

@@ -1,7 +1,10 @@
 import { Outlet, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { BackToTop, ScrollProgress } from "../motion";
+import { EASE } from "../motion/ease";
 
 export function Layout() {
   const location = useLocation();
@@ -12,11 +15,19 @@ export function Layout() {
 
   return (
     <div className="flex min-h-screen flex-col bg-white">
+      <ScrollProgress />
       <Header />
-      <main className="flex-1">
+      <motion.main
+        key={location.pathname}
+        className="flex-1"
+        initial={{ opacity: 0, y: 14 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: EASE }}
+      >
         <Outlet />
-      </main>
+      </motion.main>
       <Footer />
+      <BackToTop />
     </div>
   );
 }

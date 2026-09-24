@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { AnimatePresence, motion } from "framer-motion";
+import { EASE } from "../motion/ease";
 
 export const EVENT_START_DATE = new Date("2026-11-11T09:00:00+02:00");
 
@@ -54,8 +56,20 @@ export function CountdownTimer({ target = EVENT_START_DATE, variant = "dark" }: 
               : "bg-white border border-ink-800/10 text-ink-800"
           }`}
         >
-          <span className="font-display text-2xl sm:text-3xl font-bold tabular-nums">
-            {String(value).padStart(2, "0")}
+          {/* Each tick slides the new value up while the old one leaves. */}
+          <span className="relative block h-8 overflow-hidden sm:h-9">
+            <AnimatePresence mode="popLayout" initial={false}>
+              <motion.span
+                key={value}
+                className="block font-display text-2xl font-bold leading-8 tabular-nums sm:text-3xl sm:leading-9"
+                initial={{ y: "100%", opacity: 0 }}
+                animate={{ y: "0%", opacity: 1 }}
+                exit={{ y: "-100%", opacity: 0 }}
+                transition={{ duration: 0.45, ease: EASE }}
+              >
+                {String(value).padStart(2, "0")}
+              </motion.span>
+            </AnimatePresence>
           </span>
           <span
             className={`text-[10px] sm:text-xs uppercase tracking-widest font-semibold ${

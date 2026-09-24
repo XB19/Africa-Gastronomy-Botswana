@@ -73,3 +73,9 @@ This is a static frontend. To go live it needs:
   in `index.html`.
 - Fully responsive: every section built mobile-first and checked at
   390px / 1440px.
+- Motion: Framer Motion, with the helpers in `src/components/motion/`
+  (`Reveal`, `Stagger`, `CountUp`, `ProgressBar`, `ParallaxImage`,
+  `ScrollProgress`, `BackToTop`). Section headings, cards and grids reveal on
+  scroll; heroes have a parallax/Ken Burns background and staggered copy;
+  pages fade in on navigation. `MotionConfig reducedMotion="user"` in
+  `App.tsx` turns motion off for visitors who ask their OS for reduced motion.

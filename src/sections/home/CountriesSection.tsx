@@ -5,6 +5,7 @@ import { SectionHeading } from "../../components/ui/SectionHeading";
 import { LinkButton } from "../../components/ui/Button";
 import { paths } from "../../router/paths";
 import { countries } from "../../data/countries";
+import { Stagger } from "../../components/motion";
 
 export function CountriesSection() {
   const { t } = useTranslation();
@@ -23,13 +24,13 @@ export function CountriesSection() {
           </LinkButton>
         </div>
 
-        <div className="grid grid-cols-2 gap-px bg-ink-800/8 sm:grid-cols-4 lg:grid-cols-5">
+        <Stagger className="grid grid-cols-2 gap-px bg-ink-800/8 sm:grid-cols-4 lg:grid-cols-5" step={0.04}>
           {countries.slice(0, 15).map((country) => (
             <div
               key={country.name}
-              className="flex items-center gap-3 bg-white px-4 py-3.5"
+              className="group relative transition-shadow duration-300 hover:z-10 hover:shadow-2xl hover:shadow-ink-900/10 flex items-center gap-3 bg-white px-4 py-3.5"
             >
-              <span className="text-2xl leading-none">{country.flag}</span>
+              <span className="text-2xl leading-none transition-transform duration-300 group-hover:scale-125">{country.flag}</span>
               <div className="flex flex-col">
                 <span className="text-sm font-semibold text-ink-800">{country.name}</span>
                 <span
@@ -42,7 +43,7 @@ export function CountriesSection() {
               </div>
             </div>
           ))}
-        </div>
+        </Stagger>
       </Container>
     </section>
   );

@@ -6,6 +6,7 @@ import { Container } from "../components/ui/Container";
 import { Badge } from "../components/ui/Card";
 import { programmes } from "../data/programmes";
 import { kitchenImages, pick } from "../lib/images";
+import { Stagger } from "../components/motion";
 
 const days = [
   { date: "11 Nov 2026", label: "Day 1 · Opening" },
@@ -43,16 +44,16 @@ export default function CalendarPage() {
                   </span>
                   <h3 className="font-display text-2xl font-semibold text-ink-800">{day.label}</h3>
                 </div>
-                <div className="flex flex-col gap-4 border-l border-ink-800/10 pl-6">
+                <Stagger step={0.08} className="flex flex-col gap-4 border-l border-ink-800/10 pl-6">
                   {dayItems.length === 0 && (
                     <p className="text-sm text-ink-400">Schedule to be announced.</p>
                   )}
                   {dayItems.map((item) => (
                     <div
                       key={item.id}
-                      className="flex items-start gap-4 border border-ink-800/8 bg-white p-5"
+                      className="group flex items-start gap-4 border border-ink-800/8 bg-white p-5 transition-[border-color,box-shadow,translate] duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-ink-900/8 hover:border-primary-300"
                     >
-                      <span className="flex h-10 w-10 shrink-0 items-center justify-center bg-primary-50 text-primary-600">
+                      <span className="flex h-10 w-10 shrink-0 items-center justify-center bg-primary-50 text-primary-600 transition-colors duration-300 group-hover:bg-primary-500 group-hover:text-white">
                         <FontAwesomeIcon icon={dataIconMap[item.icon]} className="text-sm" />
                       </span>
                       <div className="flex flex-col gap-1">
@@ -64,7 +65,7 @@ export default function CalendarPage() {
                       </div>
                     </div>
                   ))}
-                </div>
+                </Stagger>
               </div>
             );
           })}

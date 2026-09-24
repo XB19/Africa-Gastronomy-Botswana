@@ -9,6 +9,7 @@ import { LinkButton } from "../../components/ui/Button";
 import { icons } from "../../lib/icons";
 import { paths } from "../../router/paths";
 import { programmes } from "../../data/programmes";
+import { Stagger } from "../../components/motion";
 
 const typeLabel: Record<string, string> = {
   masterclass: "Masterclass",
@@ -34,12 +35,12 @@ export function ProgrammesHighlight() {
           </LinkButton>
         </div>
 
-        <div className="grid grid-cols-1 gap-px bg-ink-800/8 sm:grid-cols-2 lg:grid-cols-3">
+        <Stagger className="grid grid-cols-1 gap-px bg-ink-800/8 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((programme) => (
-            <div key={programme.id} className="group flex flex-col gap-4 bg-white p-7">
+            <div key={programme.id} className="group relative transition-shadow duration-300 hover:z-10 hover:shadow-2xl hover:shadow-ink-900/10 flex flex-col gap-4 bg-white p-7">
               <div className="flex items-center justify-between">
                 <Badge>{typeLabel[programme.type]}</Badge>
-                <FontAwesomeIcon icon={dataIconMap[programme.icon]} className="text-lg text-primary-500" />
+                <FontAwesomeIcon icon={dataIconMap[programme.icon]} className="text-lg text-primary-500 transition-transform duration-500 group-hover:rotate-12 group-hover:scale-125" />
               </div>
               <h3 className="font-display text-lg font-semibold text-primary-700">{programme.title}</h3>
               <p className="text-sm leading-relaxed text-ink-500">{programme.description}</p>
@@ -49,7 +50,7 @@ export function ProgrammesHighlight() {
               </div>
             </div>
           ))}
-        </div>
+        </Stagger>
       </Container>
     </section>
   );

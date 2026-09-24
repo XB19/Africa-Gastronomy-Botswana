@@ -3,6 +3,7 @@ import { Container } from "../../components/ui/Container";
 import { SectionHeading } from "../../components/ui/SectionHeading";
 import { PhotoStrip } from "../../components/ui/PhotoStrip";
 import { kitchenImages, pick } from "../../lib/images";
+import { CountUp, Reveal, Stagger } from "../../components/motion";
 
 export function Intro() {
   const { t } = useTranslation();
@@ -27,20 +28,22 @@ export function Intro() {
           kicker={t("home.intro.kicker")}
           title={t("home.intro.title")}
         />
+        <Reveal delay={0.2}>
         <p className="mt-5 text-base leading-[1.8] text-ink-500 sm:text-[17px]">{t("home.intro.text")}</p>
+        </Reveal>
       </Container>
 
       <PhotoStrip items={strip} className="mt-14" />
 
       <Container>
-        <div className="grid grid-cols-2 divide-x divide-y divide-ink-800/8 border-t border-ink-800/8 sm:grid-cols-4 sm:divide-y-0">
+        <Stagger className="grid grid-cols-2 divide-x divide-y divide-ink-800/8 border-t border-ink-800/8 sm:grid-cols-4 sm:divide-y-0">
           {stats.map(([value, label]) => (
             <div key={label} className="flex flex-col gap-1 px-5 py-6 sm:px-8">
-              <span className="font-display text-3xl font-bold text-primary-600 sm:text-4xl">{value}</span>
+              <CountUp value={value} className="font-display text-3xl font-bold text-primary-600 sm:text-4xl" />
               <span className="text-xs font-medium uppercase tracking-wide text-ink-400">{label}</span>
             </div>
           ))}
-        </div>
+        </Stagger>
       </Container>
     </section>
   );

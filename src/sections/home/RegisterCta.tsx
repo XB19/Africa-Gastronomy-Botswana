@@ -4,6 +4,7 @@ import { Container } from "../../components/ui/Container";
 import { LinkButton } from "../../components/ui/Button";
 import { paths } from "../../router/paths";
 import { foodImages, pick } from "../../lib/images";
+import { ParallaxImage, Reveal } from "../../components/motion";
 
 export function RegisterCta() {
   const { t } = useTranslation();
@@ -11,8 +12,8 @@ export function RegisterCta() {
   return (
     <section className="py-16 sm:py-20">
       <Container className="max-w-5xl">
-        <div className="relative aspect-[4/1] w-full overflow-hidden">
-          <img src={pick(foodImages, 20)} alt="" className="h-full w-full object-cover" />
+        <Reveal className="relative aspect-[4/1] w-full overflow-hidden">
+          <ParallaxImage src={pick(foodImages, 20)} strength={40} />
           <div className="absolute inset-0 bg-ink-900/60" />
           <div className="absolute inset-x-0 bottom-0 flex flex-wrap items-end justify-between gap-4 p-5 sm:p-8">
             <div className="max-w-md bg-ink-900/85 px-5 py-4">
@@ -27,7 +28,7 @@ export function RegisterCta() {
               {t("home.registerCta.cta")}
             </LinkButton>
           </div>
-        </div>
+        </Reveal>
       </Container>
     </section>
   );

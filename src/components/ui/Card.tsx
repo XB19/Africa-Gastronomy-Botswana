@@ -1,4 +1,6 @@
 import type { PropsWithChildren } from "react";
+import { motion } from "framer-motion";
+import { EASE } from "../motion/ease";
 
 export function Card({
   children,
@@ -6,13 +8,19 @@ export function Card({
   hover = true,
 }: PropsWithChildren<{ className?: string; hover?: boolean }>) {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.7, ease: EASE }}
       className={`border border-ink-800/8 bg-white ${
-        hover ? "transition-colors duration-200 hover:border-primary-300" : ""
+        hover
+          ? "transition-[border-color,box-shadow,translate] duration-300 hover:-translate-y-1 hover:border-primary-300 hover:shadow-xl hover:shadow-ink-900/8"
+          : ""
       } ${className}`}
     >
       {children}
-    </div>
+    </motion.div>
   );
 }
 
