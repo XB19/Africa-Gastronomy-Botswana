@@ -21,7 +21,7 @@ export function RegisterShell({ step, title, subtitle, children }: PropsWithChil
   ];
 
   return (
-    <section className="bg-cream-100 py-14 sm:py-20">
+    <section className="bg-surface-100 py-14 sm:py-20">
       <Container className="flex flex-col gap-10">
         <StepIndicator steps={steps} current={step} />
         <div className="flex flex-col gap-2">

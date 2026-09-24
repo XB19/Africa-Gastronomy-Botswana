@@ -30,11 +30,11 @@ export function PhotoStrip({ items, className = "", columns = 3 }: PhotoStripPro
           <div className="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/10 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
             {item.eyebrow && (
-              <span className="block text-[11px] font-bold uppercase tracking-[0.15em] text-terracotta-300">
+              <span className="block text-[11px] font-bold uppercase tracking-[0.15em] text-primary-300">
                 {item.eyebrow}
               </span>
             )}
-            <span className="mt-1 block font-display text-lg font-bold uppercase leading-tight text-cream-50 sm:text-xl">
+            <span className="mt-1 block font-display text-lg font-bold uppercase leading-tight text-surface-50 sm:text-xl">
               {item.title}
             </span>
           </div>

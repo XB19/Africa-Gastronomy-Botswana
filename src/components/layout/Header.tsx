@@ -20,7 +20,7 @@ export function Header() {
 
   const navLinkClass = (isActive: boolean) =>
     `shrink-0 whitespace-nowrap text-[12.5px] font-semibold uppercase tracking-normal transition-colors ${
-      isActive ? "text-terracotta-600" : "text-ink-700 hover:text-terracotta-600"
+      isActive ? "text-primary-600" : "text-ink-700 hover:text-primary-600"
     }`;
 
   const eventLinks = [
@@ -31,9 +31,9 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-ink-800/8 bg-white">
-      <div className="hidden border-b border-ink-800/8 bg-cream-100 lg:block">
+      <div className="hidden border-b border-ink-800/8 bg-surface-100 lg:block">
         <div className="mx-auto flex max-w-8xl items-center justify-end gap-2 px-5 py-2 text-xs text-ink-500 sm:px-8 lg:px-12">
-          <FontAwesomeIcon icon={icons.location} className="text-[10px] text-terracotta-500" />
+          <FontAwesomeIcon icon={icons.location} className="text-[10px] text-primary-500" />
           <span>{t("header.topbar")}</span>
         </div>
       </div>
@@ -43,7 +43,7 @@ export function Header() {
           <img src={logo} alt="Africa Gastronomy Botswana" className="h-12 w-12" />
           <div className="hidden leading-tight sm:block">
             <span className="block font-display text-[15px] font-bold text-ink-800">FIGA Botswana</span>
-            <span className="block text-[10px] font-semibold uppercase tracking-widest text-terracotta-600">
+            <span className="block text-[10px] font-semibold uppercase tracking-widest text-primary-600">
               2026
             </span>
           </div>
@@ -73,7 +73,7 @@ export function Header() {
           >
             <button
               type="button"
-              className="flex items-center gap-1.5 whitespace-nowrap text-[12.5px] font-semibold uppercase tracking-normal text-ink-700 hover:text-terracotta-600"
+              className="flex items-center gap-1.5 whitespace-nowrap text-[12.5px] font-semibold uppercase tracking-normal text-ink-700 hover:text-primary-600"
             >
               Event
               <FontAwesomeIcon icon={icons.chevronDown} className="text-[9px]" />
@@ -87,8 +87,8 @@ export function Header() {
                       to={link.to}
                       className={({ isActive }) =>
                         `block px-4 py-2.5 text-sm font-medium normal-case ${
-                          isActive ? "text-terracotta-600" : "text-ink-700"
-                        } hover:bg-cream-100 hover:text-terracotta-600`
+                          isActive ? "text-primary-600" : "text-ink-700"
+                        } hover:bg-surface-100 hover:text-primary-600`
                       }
                     >
                       {link.label}
@@ -145,7 +145,7 @@ export function Header() {
                 key={link.to}
                 to={link.to}
                 className={({ isActive }) =>
-                  `px-3 py-3 text-base font-semibold ${isActive ? "bg-cream-100 text-terracotta-600" : "text-ink-700"}`
+                  `px-3 py-3 text-base font-semibold ${isActive ? "bg-surface-100 text-primary-600" : "text-ink-700"}`
                 }
               >
                 {link.label}

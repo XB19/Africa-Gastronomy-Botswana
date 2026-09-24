@@ -25,14 +25,14 @@ export default function RegisterSummary() {
             <h3 className="font-display text-base font-semibold text-ink-800">{t("register.steps.programme")}</h3>
             <button
               onClick={() => navigate(paths.register)}
-              className="text-xs font-semibold text-terracotta-600 hover:underline"
+              className="text-xs font-semibold text-primary-600 hover:underline"
             >
               {t("register.summary.edit")}
             </button>
           </div>
           {programme ? (
             <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center bg-terracotta-50 text-terracotta-600">
+              <span className="flex h-10 w-10 items-center justify-center bg-primary-50 text-primary-600">
                 <FontAwesomeIcon icon={dataIconMap[programme.icon]} />
               </span>
               <div>
@@ -50,19 +50,19 @@ export default function RegisterSummary() {
             <h3 className="font-display text-base font-semibold text-ink-800">{t("register.steps.category")}</h3>
             <button
               onClick={() => navigate(paths.registerCategory)}
-              className="text-xs font-semibold text-terracotta-600 hover:underline"
+              className="text-xs font-semibold text-primary-600 hover:underline"
             >
               {t("register.summary.edit")}
             </button>
           </div>
           {category ? (
             <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center bg-terracotta-50 text-terracotta-600">
+              <span className="flex h-10 w-10 items-center justify-center bg-primary-50 text-primary-600">
                 <FontAwesomeIcon icon={categoryIconMap[category.icon]} />
               </span>
               <div>
                 <p className="font-semibold text-ink-800">{category.name}</p>
-                <p className="text-xs font-bold text-terracotta-600">{category.price}</p>
+                <p className="text-xs font-bold text-primary-600">{category.price}</p>
               </div>
             </div>
           ) : (
@@ -75,7 +75,7 @@ export default function RegisterSummary() {
             <h3 className="font-display text-base font-semibold text-ink-800">{t("register.steps.details")}</h3>
             <button
               onClick={() => navigate(paths.registerDetails)}
-              className="text-xs font-semibold text-terracotta-600 hover:underline"
+              className="text-xs font-semibold text-primary-600 hover:underline"
             >
               {t("register.summary.edit")}
             </button>

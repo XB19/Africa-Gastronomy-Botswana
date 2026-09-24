@@ -30,7 +30,7 @@ export default function Partners() {
                 {Array.from({ length: tier.slots }).map((_, i) => (
                   <div
                     key={i}
-                    className="flex aspect-[3/2] items-center justify-center border border-dashed border-ink-800/15 bg-cream-200/50 text-ink-300"
+                    className="flex aspect-[3/2] items-center justify-center border border-dashed border-ink-800/15 bg-surface-200/50 text-ink-300"
                   >
                     <FontAwesomeIcon icon={icons.building} className="text-2xl" />
                   </div>
@@ -49,12 +49,12 @@ export default function Partners() {
             subtitle={t("partnersPage.tiers.text")}
             light
           />
-          <div className="flex flex-col gap-4 border border-cream-50/10 bg-white/5 p-8">
-            <div className="flex items-center gap-3 text-cream-50">
-              <FontAwesomeIcon icon={icons.lock} className="text-terracotta-300" />
+          <div className="flex flex-col gap-4 border border-surface-50/10 bg-white/5 p-8">
+            <div className="flex items-center gap-3 text-surface-50">
+              <FontAwesomeIcon icon={icons.lock} className="text-primary-300" />
               <span className="font-semibold">{t("partnersPage.portalCta")}</span>
             </div>
-            <p className="text-sm text-cream-100/70">
+            <p className="text-sm text-surface-100/70">
               Sponsors will be able to manage assets, hospitality and activations directly through the Sponsor
               Portal ahead of FIGA Botswana 2026.
             </p>

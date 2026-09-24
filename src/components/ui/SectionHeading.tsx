@@ -22,7 +22,7 @@ export function SectionHeading({
       {kicker && (
         <span
           className={`text-xs font-bold uppercase tracking-[0.15em] ${
-            light ? "text-terracotta-300" : "text-terracotta-600"
+            light ? "text-primary-300" : "text-primary-600"
           }`}
         >
           {kicker}
@@ -30,7 +30,7 @@ export function SectionHeading({
       )}
       <h2
         className={`font-display text-3xl sm:text-4xl font-bold leading-[1.12] text-balance ${
-          light ? "text-cream-50" : "text-ink-800"
+          light ? "text-surface-50" : "text-ink-800"
         }`}
       >
         {title}
@@ -38,7 +38,7 @@ export function SectionHeading({
       {subtitle && (
         <p
           className={`max-w-2xl text-base leading-relaxed ${
-            light ? "text-cream-100/80" : "text-ink-500"
+            light ? "text-surface-100/80" : "text-ink-500"
           } ${align === "center" ? "mx-auto" : ""}`}
         >
           {subtitle}

@@ -27,7 +27,7 @@ export function FeaturedActivities() {
               to={paths.programmes}
               className="group flex flex-col gap-5 bg-white p-8"
             >
-              <h3 className="font-display text-xl font-semibold text-terracotta-700">{item.title}</h3>
+              <h3 className="font-display text-xl font-semibold text-primary-700">{item.title}</h3>
               <p className="text-sm leading-relaxed text-ink-500">{item.text}</p>
               <ArrowButton className="mt-auto" />
             </Link>

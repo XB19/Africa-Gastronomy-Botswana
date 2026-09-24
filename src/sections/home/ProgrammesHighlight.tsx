@@ -21,7 +21,7 @@ export function ProgrammesHighlight() {
   const featured = programmes.slice(0, 6);
 
   return (
-    <section className="bg-cream-200/50 py-16 sm:py-20">
+    <section className="bg-surface-200/50 py-16 sm:py-20">
       <Container className="flex flex-col gap-10">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeading
@@ -39,9 +39,9 @@ export function ProgrammesHighlight() {
             <div key={programme.id} className="group flex flex-col gap-4 bg-white p-7">
               <div className="flex items-center justify-between">
                 <Badge>{typeLabel[programme.type]}</Badge>
-                <FontAwesomeIcon icon={dataIconMap[programme.icon]} className="text-lg text-terracotta-500" />
+                <FontAwesomeIcon icon={dataIconMap[programme.icon]} className="text-lg text-primary-500" />
               </div>
-              <h3 className="font-display text-lg font-semibold text-terracotta-700">{programme.title}</h3>
+              <h3 className="font-display text-lg font-semibold text-primary-700">{programme.title}</h3>
               <p className="text-sm leading-relaxed text-ink-500">{programme.description}</p>
               <div className="mt-auto flex items-center justify-between pt-2">
                 <span className="text-xs font-semibold uppercase tracking-wide text-ink-400">{programme.day}</span>

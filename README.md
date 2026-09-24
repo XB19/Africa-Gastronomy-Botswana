@@ -64,10 +64,12 @@ This is a static frontend. To go live it needs:
 
 ## Design system
 
-- Colours: terracotta (`--color-terracotta-*`) drawn from the FIGA emblem,
-  deep espresso ink for dark sections, warm cream background, gold/forest/teal
-  as supporting accents. Defined in `src/index.css` via Tailwind v4 `@theme`.
-- Type: Playfair Display (headings) + Manrope (body), loaded via Google Fonts
+- Colours: institutional look adapted from the UN Tourism gastronomy pages —
+  a single UN-blue accent (`--color-primary-*`), deep navy ink for text and
+  dark sections (`--color-ink-*`), white / cool light-grey surfaces
+  (`--color-surface-*`), gold/forest/teal as supporting accents. Defined in
+  `src/index.css` via Tailwind v4 `@theme`.
+- Type: Roboto (headings) + Open Sans (body), loaded via Google Fonts
   in `index.html`.
 - Fully responsive: every section built mobile-first and checked at
   390px / 1440px.

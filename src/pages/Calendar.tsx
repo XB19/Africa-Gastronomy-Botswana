@@ -37,7 +37,7 @@ export default function CalendarPage() {
             return (
               <div key={day.date} className="grid grid-cols-1 gap-6 lg:grid-cols-[220px_1fr]">
                 <div className="flex flex-col gap-1 lg:sticky lg:top-28 lg:self-start">
-                  <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-terracotta-600">
+                  <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary-600">
                     <FontAwesomeIcon icon={icons.calendar} />
                     {day.date}
                   </span>
@@ -52,7 +52,7 @@ export default function CalendarPage() {
                       key={item.id}
                       className="flex items-start gap-4 border border-ink-800/8 bg-white p-5"
                     >
-                      <span className="flex h-10 w-10 shrink-0 items-center justify-center bg-terracotta-50 text-terracotta-600">
+                      <span className="flex h-10 w-10 shrink-0 items-center justify-center bg-primary-50 text-primary-600">
                         <FontAwesomeIcon icon={dataIconMap[item.icon]} className="text-sm" />
                       </span>
                       <div className="flex flex-col gap-1">

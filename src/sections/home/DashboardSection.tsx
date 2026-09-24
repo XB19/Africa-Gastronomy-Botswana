@@ -16,7 +16,7 @@ const stats = [
 ];
 
 const breakdown = [
-  { label: "Masterclasses", count: programmes.filter((p) => p.type === "masterclass").length, color: "bg-terracotta-500" },
+  { label: "Masterclasses", count: programmes.filter((p) => p.type === "masterclass").length, color: "bg-primary-500" },
   { label: "Competitions", count: programmes.filter((p) => p.type === "competition").length, color: "bg-gold-500" },
   { label: "Exhibitions", count: programmes.filter((p) => p.type === "exhibition").length, color: "bg-forest-500" },
 ];
@@ -43,13 +43,13 @@ export function DashboardSection() {
           {stats.map((stat) => (
             <div key={stat.label} className="bg-white p-7">
               <div className="flex items-center justify-between">
-                <FontAwesomeIcon icon={stat.icon} className="text-lg text-terracotta-500" />
+                <FontAwesomeIcon icon={stat.icon} className="text-lg text-primary-500" />
                 <span className="font-display text-3xl font-bold text-ink-800">{stat.value}</span>
               </div>
               <p className="mt-4 text-sm font-semibold text-ink-500">{stat.label}</p>
               <div className="mt-3 h-1 w-full overflow-hidden bg-ink-800/8">
                 <div
-                  className="h-full bg-terracotta-500"
+                  className="h-full bg-primary-500"
                   style={{ width: `${Math.min(100, (stat.value / stat.target) * 100)}%`}}
                 />
               </div>

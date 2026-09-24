@@ -18,9 +18,9 @@ export function StepIndicator({ steps, current }: StepIndicatorProps) {
               <div
                 className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-bold transition-colors ${
                   isDone
-                    ? "bg-terracotta-500 text-white"
+                    ? "bg-primary-500 text-white"
                     : isCurrent
-                    ? "border-2 border-terracotta-500 text-terracotta-600"
+                    ? "border-2 border-primary-500 text-primary-600"
                     : "border-2 border-ink-800/15 text-ink-300"
                 }`}
               >
@@ -28,14 +28,14 @@ export function StepIndicator({ steps, current }: StepIndicatorProps) {
               </div>
               <span
                 className={`hidden text-center text-[11px] font-semibold uppercase tracking-wide sm:block ${
-                  isCurrent ? "text-terracotta-600" : isDone ? "text-ink-600" : "text-ink-300"
+                  isCurrent ? "text-primary-600" : isDone ? "text-ink-600" : "text-ink-300"
                 }`}
               >
                 {label}
               </span>
             </div>
             {i < steps.length - 1 && (
-              <div className={`mx-2 h-0.5 flex-1 sm:mx-3 ${isDone ? "bg-terracotta-500" : "bg-ink-800/10"}`} />
+              <div className={`mx-2 h-0.5 flex-1 sm:mx-3 ${isDone ? "bg-primary-500" : "bg-ink-800/10"}`} />
             )}
           </div>
         );

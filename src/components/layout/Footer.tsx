@@ -35,27 +35,27 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-ink-800 text-cream-100">
+    <footer className="bg-ink-800 text-surface-100">
       <Container className="grid grid-cols-1 gap-12 py-16 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-3">
             <img src={logo} alt="Africa Gastronomy Botswana" className="h-11 w-11" />
-            <span className="font-display text-base font-bold text-cream-50">FIGA Botswana 2026</span>
+            <span className="font-display text-base font-bold text-surface-50">FIGA Botswana 2026</span>
           </div>
-          <p className="max-w-xs text-sm leading-relaxed text-cream-100/65">{t("footer.address")}</p>
-          <a href={`mailto:${t("footer.email")}`} className="text-sm text-cream-100/65 hover:text-cream-50">
+          <p className="max-w-xs text-sm leading-relaxed text-surface-100/65">{t("footer.address")}</p>
+          <a href={`mailto:${t("footer.email")}`} className="text-sm text-surface-100/65 hover:text-surface-50">
             {t("footer.email")}
           </a>
         </div>
 
         <div>
-          <h3 className="text-xs font-bold uppercase tracking-[0.15em] text-terracotta-400">
+          <h3 className="text-xs font-bold uppercase tracking-[0.15em] text-primary-400">
             {t("footer.explore")}
           </h3>
           <ul className="mt-5 flex flex-col gap-3">
             {exploreLinks.map((l) => (
               <li key={l.to}>
-                <NavLink to={l.to} className="text-sm text-cream-100/70 hover:text-cream-50">
+                <NavLink to={l.to} className="text-sm text-surface-100/70 hover:text-surface-50">
                   {l.label}
                 </NavLink>
               </li>
@@ -64,13 +64,13 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="text-xs font-bold uppercase tracking-[0.15em] text-terracotta-400">
+          <h3 className="text-xs font-bold uppercase tracking-[0.15em] text-primary-400">
             {t("footer.quickLinks")}
           </h3>
           <ul className="mt-5 flex flex-col gap-3">
             {quickLinks.map((l) => (
               <li key={l.to}>
-                <NavLink to={l.to} className="text-sm text-cream-100/70 hover:text-cream-50">
+                <NavLink to={l.to} className="text-sm text-surface-100/70 hover:text-surface-50">
                   {l.label}
                 </NavLink>
               </li>
@@ -79,27 +79,27 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="text-xs font-bold uppercase tracking-[0.15em] text-terracotta-400">Follow Us</h3>
+          <h3 className="text-xs font-bold uppercase tracking-[0.15em] text-primary-400">Follow Us</h3>
           <div className="mt-5 flex flex-wrap gap-2.5">
             {socialLinks.map((icon, i) => (
               <a
                 key={i}
                 href="#"
-                className="flex h-9 w-9 items-center justify-center border border-cream-100/15 text-cream-100/80 transition-colors hover:border-terracotta-400 hover:text-terracotta-400"
+                className="flex h-9 w-9 items-center justify-center border border-surface-100/15 text-surface-100/80 transition-colors hover:border-primary-400 hover:text-primary-400"
                 aria-label="social link"
               >
                 <FontAwesomeIcon icon={icon} className="text-sm" />
               </a>
             ))}
           </div>
-          <a href={`tel:${t("footer.phone")}`} className="mt-5 block text-sm text-cream-100/70 hover:text-cream-50">
+          <a href={`tel:${t("footer.phone")}`} className="mt-5 block text-sm text-surface-100/70 hover:text-surface-50">
             {t("footer.phone")}
           </a>
         </div>
       </Container>
 
-      <div className="border-t border-cream-100/10">
-        <Container className="flex flex-col items-center justify-between gap-2 py-5 text-xs text-cream-100/55 sm:flex-row">
+      <div className="border-t border-surface-100/10">
+        <Container className="flex flex-col items-center justify-between gap-2 py-5 text-xs text-surface-100/55 sm:flex-row">
           <span>© {new Date().getFullYear()} Africa Gastronomy Botswana. {t("footer.rights")}</span>
           <span>{t("meta.eventName")} · {t("meta.dates")} · {t("meta.location")}</span>
         </Container>

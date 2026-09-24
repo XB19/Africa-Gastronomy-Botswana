@@ -23,7 +23,7 @@ export default function ChefsSpeakers() {
 
       <section className="py-16 sm:py-20">
         <Container className="flex flex-col gap-10">
-          <div className="border border-terracotta-200 bg-terracotta-50 px-6 py-4 text-sm text-terracotta-700">
+          <div className="border border-primary-200 bg-primary-50 px-6 py-4 text-sm text-primary-700">
             <FontAwesomeIcon icon={icons.filter} className="mr-2" />
             {t("common.placeholderNote")}
           </div>
@@ -32,7 +32,7 @@ export default function ChefsSpeakers() {
             {chefProfiles.map((chef) => (
               <div
                 key={chef.id}
-                className="group overflow-hidden border border-ink-800/8 bg-white transition-colors hover:border-terracotta-300"
+                className="group overflow-hidden border border-ink-800/8 bg-white transition-colors hover:border-primary-300"
               >
                 <div className="relative overflow-hidden">
                   <img

@@ -11,7 +11,7 @@ export function GalleryPreview() {
   const images = Array.from({ length: 8 }).map((_, i) => pick(foodImages, i + 8));
 
   return (
-    <section className="bg-cream-200/50 py-16 sm:py-20">
+    <section className="bg-surface-200/50 py-16 sm:py-20">
       <Container className="flex flex-col gap-10">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeading

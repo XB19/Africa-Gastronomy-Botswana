@@ -27,25 +27,25 @@ export default function RegisterCategory() {
             <button
               key={cat.id}
               onClick={() => setCategoryId(cat.id)}
-              className={`flex flex-col gap-4 border p-6 text-left transition-colors hover:border-terracotta-400 ${
-                selected ? "border-terracotta-500 bg-terracotta-50" : "border-ink-800/8 bg-white"
+              className={`flex flex-col gap-4 border p-6 text-left transition-colors hover:border-primary-400 ${
+                selected ? "border-primary-500 bg-primary-50" : "border-ink-800/8 bg-white"
               }`}
             >
               <div className="flex items-center justify-between">
-                <span className="flex h-11 w-11 items-center justify-center bg-terracotta-100 text-terracotta-600">
+                <span className="flex h-11 w-11 items-center justify-center bg-primary-100 text-primary-600">
                   <FontAwesomeIcon icon={categoryIconMap[cat.icon]} />
                 </span>
-                {selected && <FontAwesomeIcon icon={icons.check} className="text-lg text-terracotta-500" />}
+                {selected && <FontAwesomeIcon icon={icons.check} className="text-lg text-primary-500" />}
               </div>
               <div>
-                <h3 className="font-display text-base font-semibold text-terracotta-700">{cat.name}</h3>
-                <p className="mt-0.5 text-sm font-bold text-terracotta-600">{cat.price}</p>
+                <h3 className="font-display text-base font-semibold text-primary-700">{cat.name}</h3>
+                <p className="mt-0.5 text-sm font-bold text-primary-600">{cat.price}</p>
               </div>
               <p className="text-sm text-ink-500">{cat.description}</p>
               <ul className="flex flex-col gap-1.5 text-xs text-ink-500">
                 {cat.perks.map((perk) => (
                   <li key={perk} className="flex items-center gap-2">
-                    <FontAwesomeIcon icon={icons.checkPlain} className="text-terracotta-400" />
+                    <FontAwesomeIcon icon={icons.checkPlain} className="text-primary-400" />
                     {perk}
                   </li>
                 ))}

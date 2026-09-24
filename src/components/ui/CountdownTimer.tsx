@@ -50,7 +50,7 @@ export function CountdownTimer({ target = EVENT_START_DATE, variant = "dark" }: 
           key={label + i}
           className={`flex flex-col items-center justify-center gap-1 px-3.5 py-3 sm:px-5 sm:py-4 min-w-[68px] sm:min-w-[84px] ${
             isDark
-              ? "bg-white/[0.06] border border-white/15 text-cream-50"
+              ? "bg-white/[0.06] border border-white/15 text-surface-50"
               : "bg-white border border-ink-800/10 text-ink-800"
           }`}
         >
@@ -59,7 +59,7 @@ export function CountdownTimer({ target = EVENT_START_DATE, variant = "dark" }: 
           </span>
           <span
             className={`text-[10px] sm:text-xs uppercase tracking-widest font-semibold ${
-              isDark ? "text-cream-100/70" : "text-ink-400"
+              isDark ? "text-surface-100/70" : "text-ink-400"
             }`}
           >
             {label}
