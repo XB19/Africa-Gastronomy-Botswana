@@ -32,7 +32,7 @@ export function PageHero({ kicker, title, subtitle, image, children }: PropsWith
         <button
           type="button"
           onClick={() => navigate(-1)}
-          className="flex items-center gap-2 text-sm font-semibold text-cream-50/85 hover:text-cream-50"
+          className="flex items-center gap-2 text-sm font-semibold text-surface-50/85 hover:text-surface-50"
         >
           <FontAwesomeIcon icon={icons.chevronLeft} className="text-xs" />
           Back
@@ -42,11 +42,11 @@ export function PageHero({ kicker, title, subtitle, image, children }: PropsWith
       <div className="flex-1" />
 
       <Container className="relative flex flex-col gap-3 pb-10 sm:pb-14 lg:pb-16">
-        <h1 className="max-w-4xl font-display text-4xl font-bold leading-[1.05] text-cream-50 text-balance sm:text-5xl lg:text-7xl">
+        <h1 className="max-w-4xl font-display text-4xl font-bold leading-[1.05] text-surface-50 text-balance sm:text-5xl lg:text-7xl">
           {title}
         </h1>
-        <span className="text-sm font-semibold text-cream-100/80">{kicker}</span>
-        {subtitle && <p className="max-w-xl pt-1 text-sm leading-relaxed text-cream-100/70">{subtitle}</p>}
+        <span className="text-sm font-semibold text-surface-100/80">{kicker}</span>
+        {subtitle && <p className="max-w-xl pt-1 text-sm leading-relaxed text-surface-100/70">{subtitle}</p>}
         {children}
       </Container>
     </section>

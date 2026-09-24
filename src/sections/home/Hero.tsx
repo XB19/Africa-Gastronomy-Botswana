@@ -18,16 +18,16 @@ export function Hero() {
       </div>
 
       <Container className="relative flex min-h-[78vh] flex-col justify-end gap-6 pb-14 pt-28 sm:min-h-[82vh]">
-        <h1 className="max-w-4xl font-display text-5xl font-bold leading-[1.03] text-cream-50 text-balance sm:text-6xl lg:text-7xl">
+        <h1 className="max-w-4xl font-display text-5xl font-bold leading-[1.03] text-surface-50 text-balance sm:text-6xl lg:text-7xl">
           {t("home.hero.title")}
-          <span className="block text-terracotta-400">{t("home.hero.titleAccent")}</span>
+          <span className="block text-primary-400">{t("home.hero.titleAccent")}</span>
         </h1>
 
-        <span className="text-sm font-semibold uppercase tracking-[0.1em] text-cream-100/85">
+        <span className="text-sm font-semibold uppercase tracking-[0.1em] text-surface-100/85">
           {t("home.hero.kicker")}
         </span>
 
-        <p className="max-w-xl text-base leading-relaxed text-cream-100/75 sm:text-lg">
+        <p className="max-w-xl text-base leading-relaxed text-surface-100/75 sm:text-lg">
           {t("home.hero.subtitle")}
         </p>
 
@@ -39,28 +39,28 @@ export function Hero() {
             to={paths.programmes}
             size="lg"
             variant="outline"
-            className="!border-cream-50/30 !text-cream-50 hover:!border-terracotta-400 hover:!text-terracotta-300"
+            className="!border-surface-50/30 !text-surface-50 hover:!border-primary-400 hover:!text-primary-300"
           >
             {t("home.hero.ctaSecondary")}
           </LinkButton>
         </div>
 
         <div className="mt-6 flex flex-col gap-3">
-          <span className="text-xs font-semibold uppercase tracking-widest text-cream-100/55">
+          <span className="text-xs font-semibold uppercase tracking-widest text-surface-100/55">
             {t("home.hero.countdownLabel")}
           </span>
           <CountdownTimer />
         </div>
       </Container>
 
-      <div className="relative border-t border-cream-50/10 bg-ink-900">
-        <Container className="flex flex-wrap items-center gap-x-10 gap-y-2 py-3.5 text-sm text-cream-100/75">
-          <span className="flex items-center gap-2 font-semibold text-cream-50">
-            <FontAwesomeIcon icon={icons.calendar} className="text-terracotta-400" />
+      <div className="relative border-t border-surface-50/10 bg-ink-900">
+        <Container className="flex flex-wrap items-center gap-x-10 gap-y-2 py-3.5 text-sm text-surface-100/75">
+          <span className="flex items-center gap-2 font-semibold text-surface-50">
+            <FontAwesomeIcon icon={icons.calendar} className="text-primary-400" />
             {t("meta.dates")}
           </span>
-          <span className="flex items-center gap-2 font-semibold text-cream-50">
-            <FontAwesomeIcon icon={icons.location} className="text-terracotta-400" />
+          <span className="flex items-center gap-2 font-semibold text-surface-50">
+            <FontAwesomeIcon icon={icons.location} className="text-primary-400" />
             {t("meta.location")}
           </span>
         </Container>

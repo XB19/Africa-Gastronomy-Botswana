@@ -28,20 +28,20 @@ export default function Contact() {
             <div>
               <h3 className="font-display text-xl font-semibold text-ink-800">{t("contactPage.detailsTitle")}</h3>
               <div className="mt-5 flex flex-col gap-4">
-                <a href="mailto:info@africagastronomybotswana.com" className="flex items-center gap-3 text-ink-600 hover:text-terracotta-600">
-                  <span className="flex h-10 w-10 items-center justify-center bg-terracotta-50 text-terracotta-600">
+                <a href="mailto:info@africagastronomybotswana.com" className="flex items-center gap-3 text-ink-600 hover:text-primary-600">
+                  <span className="flex h-10 w-10 items-center justify-center bg-primary-50 text-primary-600">
                     <FontAwesomeIcon icon={icons.envelope} />
                   </span>
                   info@africagastronomybotswana.com
                 </a>
-                <a href="tel:+2670000000" className="flex items-center gap-3 text-ink-600 hover:text-terracotta-600">
-                  <span className="flex h-10 w-10 items-center justify-center bg-terracotta-50 text-terracotta-600">
+                <a href="tel:+2670000000" className="flex items-center gap-3 text-ink-600 hover:text-primary-600">
+                  <span className="flex h-10 w-10 items-center justify-center bg-primary-50 text-primary-600">
                     <FontAwesomeIcon icon={icons.phone} />
                   </span>
                   +267 000 0000
                 </a>
                 <div className="flex items-center gap-3 text-ink-600">
-                  <span className="flex h-10 w-10 items-center justify-center bg-terracotta-50 text-terracotta-600">
+                  <span className="flex h-10 w-10 items-center justify-center bg-primary-50 text-primary-600">
                     <FontAwesomeIcon icon={icons.location} />
                   </span>
                   Gaborone International Convention Centre, Gaborone, Botswana
@@ -52,7 +52,7 @@ export default function Contact() {
                   <a
                     key={i}
                     href="#"
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-ink-800/10 text-ink-600 hover:border-terracotta-400 hover:text-terracotta-600"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-ink-800/10 text-ink-600 hover:border-primary-400 hover:text-primary-600"
                   >
                     <FontAwesomeIcon icon={icon} className="text-sm" />
                   </a>
@@ -60,9 +60,9 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="flex aspect-[4/3] items-center justify-center bg-ink-800 text-cream-100/40">
+            <div className="flex aspect-[4/3] items-center justify-center bg-ink-800 text-surface-100/40">
               <div className="flex flex-col items-center gap-2 text-center">
-                <FontAwesomeIcon icon={icons.location} className="text-3xl text-terracotta-400" />
+                <FontAwesomeIcon icon={icons.location} className="text-3xl text-primary-400" />
                 <span className="text-sm">{t("contactPage.mapTitle")} — Gaborone, Botswana</span>
               </div>
             </div>
@@ -86,19 +86,19 @@ export default function Contact() {
               >
                 <label className="flex flex-col gap-1.5 text-sm font-semibold text-ink-700">
                   {t("contactPage.form.name")}
-                  <input required type="text" className="border border-ink-800/15 px-4 py-3 text-sm font-normal focus:border-terracotta-400 focus:outline-none" />
+                  <input required type="text" className="border border-ink-800/15 px-4 py-3 text-sm font-normal focus:border-primary-400 focus:outline-none" />
                 </label>
                 <label className="flex flex-col gap-1.5 text-sm font-semibold text-ink-700">
                   {t("contactPage.form.email")}
-                  <input required type="email" className="border border-ink-800/15 px-4 py-3 text-sm font-normal focus:border-terracotta-400 focus:outline-none" />
+                  <input required type="email" className="border border-ink-800/15 px-4 py-3 text-sm font-normal focus:border-primary-400 focus:outline-none" />
                 </label>
                 <label className="flex flex-col gap-1.5 text-sm font-semibold text-ink-700 sm:col-span-2">
                   {t("contactPage.form.subject")}
-                  <input required type="text" className="border border-ink-800/15 px-4 py-3 text-sm font-normal focus:border-terracotta-400 focus:outline-none" />
+                  <input required type="text" className="border border-ink-800/15 px-4 py-3 text-sm font-normal focus:border-primary-400 focus:outline-none" />
                 </label>
                 <label className="flex flex-col gap-1.5 text-sm font-semibold text-ink-700 sm:col-span-2">
                   {t("contactPage.form.message")}
-                  <textarea required rows={5} className="resize-none border border-ink-800/15 px-4 py-3 text-sm font-normal focus:border-terracotta-400 focus:outline-none" />
+                  <textarea required rows={5} className="resize-none border border-ink-800/15 px-4 py-3 text-sm font-normal focus:border-primary-400 focus:outline-none" />
                 </label>
                 <Button type="submit" icon={icons.send} className="sm:col-span-2 sm:w-fit">
                   {t("contactPage.form.submit")}
@@ -109,7 +109,7 @@ export default function Contact() {
         </Container>
       </section>
 
-      <section className="bg-cream-200/50 py-16 sm:py-20">
+      <section className="bg-surface-200/50 py-16 sm:py-20">
         <Container className="flex flex-col gap-10">
           <SectionHeading title={t("contactPage.faqTitle")} align="center" className="mx-auto" />
           <div className="mx-auto flex w-full max-w-3xl flex-col gap-3">
@@ -122,7 +122,7 @@ export default function Contact() {
                   <span className="font-semibold text-ink-800">{faq.question}</span>
                   <FontAwesomeIcon
                     icon={icons.chevronDown}
-                    className={`shrink-0 text-terracotta-500 transition-transform ${openFaq === i ? "rotate-180" : ""}`}
+                    className={`shrink-0 text-primary-500 transition-transform ${openFaq === i ? "rotate-180" : ""}`}
                   />
                 </button>
                 {openFaq === i && <p className="px-6 pb-5 text-sm leading-relaxed text-ink-500">{faq.answer}</p>}

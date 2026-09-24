@@ -48,10 +48,10 @@ export default function RegisterPayment() {
                   key={m.id}
                   onClick={() => setMethod(m.id)}
                   className={`flex flex-col items-center gap-2 border p-4 text-center transition-colors ${
-                    method === m.id ? "border-terracotta-500 bg-terracotta-50" : "border-ink-800/10 bg-white"
+                    method === m.id ? "border-primary-500 bg-primary-50" : "border-ink-800/10 bg-white"
                   }`}
                 >
-                  <FontAwesomeIcon icon={m.icon} className="text-lg text-terracotta-600" />
+                  <FontAwesomeIcon icon={m.icon} className="text-lg text-primary-600" />
                   <span className="text-xs font-semibold text-ink-700">{m.label}</span>
                 </button>
               ))}
@@ -61,34 +61,34 @@ export default function RegisterPayment() {
               <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <label className="flex flex-col gap-1.5 text-sm font-semibold text-ink-700 sm:col-span-2">
                   Card Number
-                  <input required placeholder="•••• •••• •••• ••••" className="border border-ink-800/15 px-4 py-3 text-sm font-normal focus:border-terracotta-400 focus:outline-none" />
+                  <input required placeholder="•••• •••• •••• ••••" className="border border-ink-800/15 px-4 py-3 text-sm font-normal focus:border-primary-400 focus:outline-none" />
                 </label>
                 <label className="flex flex-col gap-1.5 text-sm font-semibold text-ink-700">
                   Expiry
-                  <input required placeholder="MM/YY" className="border border-ink-800/15 px-4 py-3 text-sm font-normal focus:border-terracotta-400 focus:outline-none" />
+                  <input required placeholder="MM/YY" className="border border-ink-800/15 px-4 py-3 text-sm font-normal focus:border-primary-400 focus:outline-none" />
                 </label>
                 <label className="flex flex-col gap-1.5 text-sm font-semibold text-ink-700">
                   CVC
-                  <input required placeholder="•••" className="border border-ink-800/15 px-4 py-3 text-sm font-normal focus:border-terracotta-400 focus:outline-none" />
+                  <input required placeholder="•••" className="border border-ink-800/15 px-4 py-3 text-sm font-normal focus:border-primary-400 focus:outline-none" />
                 </label>
               </div>
             )}
             {method === "mobile-money" && (
               <label className="mt-6 flex flex-col gap-1.5 text-sm font-semibold text-ink-700">
                 Mobile Money Number
-                <input required placeholder="+267 ..." className="border border-ink-800/15 px-4 py-3 text-sm font-normal focus:border-terracotta-400 focus:outline-none" />
+                <input required placeholder="+267 ..." className="border border-ink-800/15 px-4 py-3 text-sm font-normal focus:border-primary-400 focus:outline-none" />
               </label>
             )}
             {method === "bank-transfer" && (
-              <p className="mt-6 bg-cream-200/60 p-4 text-sm text-ink-500">
+              <p className="mt-6 bg-surface-200/60 p-4 text-sm text-ink-500">
                 Bank transfer details and a reference number will be emailed to you after you confirm this
                 registration.
               </p>
             )}
           </div>
 
-          <div className="flex items-center gap-2 bg-cream-200/60 px-4 py-3 text-xs text-ink-500">
-            <FontAwesomeIcon icon={icons.lock} className="text-terracotta-500" />
+          <div className="flex items-center gap-2 bg-surface-200/60 px-4 py-3 text-xs text-ink-500">
+            <FontAwesomeIcon icon={icons.lock} className="text-primary-500" />
             {t("register.payment.subtitle")}
           </div>
 
@@ -111,7 +111,7 @@ export default function RegisterPayment() {
           <div className="my-4 h-px bg-ink-800/8" />
           <div className="flex items-center justify-between text-sm font-bold">
             <span className="text-ink-800">Total Due</span>
-            <span className="text-terracotta-600">{category?.price ?? "—"}</span>
+            <span className="text-primary-600">{category?.price ?? "—"}</span>
           </div>
         </div>
       </div>

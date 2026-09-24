@@ -1,34 +1,36 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand palette — drawn from the FIGA Botswana emblem */
-  --color-terracotta-50: #fdf3ee;
-  --color-terracotta-100: #fbe3d6;
-  --color-terracotta-200: #f5c3a8;
-  --color-terracotta-300: #eda074;
-  --color-terracotta-400: #e58147;
-  --color-terracotta-500: #d96a2c;
-  --color-terracotta-600: #c05421;
-  --color-terracotta-700: #9c3f1a;
-  --color-terracotta-800: #7a2e1e;
-  --color-terracotta-900: #5c231a;
+  /* Institutional palette in the spirit of UN Tourism: a clear UN blue as
+     the single accent, deep navy for text and dark sections, white and
+     cool light-grey surfaces. */
+  --color-primary-50: #ebf5fc;
+  --color-primary-100: #d3e9f8;
+  --color-primary-200: #a8d3f1;
+  --color-primary-300: #6fb6e6;
+  --color-primary-400: #3396d8;
+  --color-primary-500: #0077c8;
+  --color-primary-600: #0062a8;
+  --color-primary-700: #004e87;
+  --color-primary-800: #003c69;
+  --color-primary-900: #002c4f;
 
-  --color-ink-50: #f7f4f1;
-  --color-ink-100: #ece4dd;
-  --color-ink-200: #d3c4b8;
-  --color-ink-300: #ab9585;
-  --color-ink-400: #7c6858;
-  --color-ink-500: #574638;
-  --color-ink-600: #3c2f26;
-  --color-ink-700: #2a201a;
-  --color-ink-800: #1c1410;
-  --color-ink-900: #120d0a;
+  --color-ink-50: #f4f6f9;
+  --color-ink-100: #e6eaf0;
+  --color-ink-200: #c9d1dd;
+  --color-ink-300: #9aa6b8;
+  --color-ink-400: #6b7a90;
+  --color-ink-500: #4a5870;
+  --color-ink-600: #34415a;
+  --color-ink-700: #243149;
+  --color-ink-800: #16223a;
+  --color-ink-900: #0c1528;
 
-  --color-cream-50: #fffdfa;
-  --color-cream-100: #fbf5ec;
-  --color-cream-200: #f5ead9;
+  --color-surface-50: #ffffff;
+  --color-surface-100: #f5f7fa;
+  --color-surface-200: #e9eef4;
 
-  --color-gold-400: #e0b355;
+--color-gold-400: #e0b355;
   --color-gold-500: #c9982e;
   --color-gold-600: #a67a1f;
 
@@ -38,8 +40,8 @@
   --color-teal-500: #2e8b87;
   --color-berry-500: #b7332d;
 
-  --font-display: "Playfair Display", ui-serif, Georgia, serif;
-  --font-body: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Roboto", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Open Sans", ui-sans-serif, system-ui, sans-serif;
 
   --container-8xl: 90rem;
 }
@@ -51,12 +53,13 @@
 
   body {
     font-family: var(--font-body);
-    background-color: var(--color-cream-100);
+    background-color: white;
     color: var(--color-ink-800);
   }
 
   h1, h2, h3, h4, .font-display {
     font-family: var(--font-display);
+    letter-spacing: -0.01em;
   }
 }
 
@@ -75,6 +78,6 @@
 }
 
 ::selection {
-  background-color: var(--color-terracotta-400);
+  background-color: var(--color-primary-400);
   color: white;
 }

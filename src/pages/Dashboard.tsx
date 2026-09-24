@@ -11,7 +11,7 @@ import { registrationCategories } from "../data/categories";
 import { kitchenImages, pick } from "../lib/images";
 
 const breakdown = [
-  { label: "Masterclasses", count: programmes.filter((p) => p.type === "masterclass").length, color: "bg-terracotta-500" },
+  { label: "Masterclasses", count: programmes.filter((p) => p.type === "masterclass").length, color: "bg-primary-500" },
   { label: "Competitions", count: programmes.filter((p) => p.type === "competition").length, color: "bg-gold-500" },
   { label: "Exhibitions", count: programmes.filter((p) => p.type === "exhibition").length, color: "bg-forest-500" },
 ];
@@ -43,7 +43,7 @@ export default function DashboardPage() {
           <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
             {topStats.map((stat) => (
               <div key={stat.label} className="border border-ink-800/8 bg-white p-6">
-                <span className="flex h-11 w-11 items-center justify-center bg-terracotta-50 text-terracotta-600">
+                <span className="flex h-11 w-11 items-center justify-center bg-primary-50 text-primary-600">
                   <FontAwesomeIcon icon={stat.icon} />
                 </span>
                 <span className="mt-4 block font-display text-3xl font-bold text-ink-800">{stat.value}</span>
@@ -76,14 +76,14 @@ export default function DashboardPage() {
                 {registrationCategories.map((cat) => (
                   <div key={cat.id} className="flex items-center justify-between text-sm">
                     <span className="text-ink-700">{cat.name}</span>
-                    <span className="font-semibold text-terracotta-600">{cat.price}</span>
+                    <span className="font-semibold text-primary-600">{cat.price}</span>
                   </div>
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="border border-dashed border-ink-800/15 bg-cream-200/50 p-8 text-center text-sm text-ink-400">
+          <div className="border border-dashed border-ink-800/15 bg-surface-200/50 p-8 text-center text-sm text-ink-400">
             Live registration counts, ticket sales and real-time delegate numbers will populate this dashboard
             once connected to the CMS and registration system.
           </div>

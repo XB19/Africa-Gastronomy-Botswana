@@ -24,7 +24,7 @@ export default function RegisterDetails() {
   }
 
   const inputClass =
-    " border border-ink-800/15 px-4 py-3 text-sm font-normal text-ink-800 focus:border-terracotta-400 focus:outline-none";
+    " border border-ink-800/15 px-4 py-3 text-sm font-normal text-ink-800 focus:border-primary-400 focus:outline-none";
   const labelClass = "flex flex-col gap-1.5 text-sm font-semibold text-ink-700";
 
   return (

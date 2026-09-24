@@ -8,7 +8,7 @@ export function Card({
   return (
     <div
       className={`border border-ink-800/8 bg-white ${
-        hover ? "transition-colors duration-200 hover:border-terracotta-300" : ""
+        hover ? "transition-colors duration-200 hover:border-primary-300" : ""
       } ${className}`}
     >
       {children}
@@ -22,7 +22,7 @@ export function Badge({
 }: PropsWithChildren<{ className?: string }>) {
   return (
     <span
-      className={`inline-flex items-center gap-1.5 bg-terracotta-50 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-terracotta-700 ${className}`}
+      className={`inline-flex items-center gap-1.5 bg-primary-50 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-primary-700 ${className}`}
     >
       {children}
     </span>

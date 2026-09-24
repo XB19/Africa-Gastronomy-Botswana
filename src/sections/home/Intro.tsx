@@ -36,7 +36,7 @@ export function Intro() {
         <div className="grid grid-cols-2 divide-x divide-y divide-ink-800/8 border-t border-ink-800/8 sm:grid-cols-4 sm:divide-y-0">
           {stats.map(([value, label]) => (
             <div key={label} className="flex flex-col gap-1 px-5 py-6 sm:px-8">
-              <span className="font-display text-3xl font-bold text-terracotta-600 sm:text-4xl">{value}</span>
+              <span className="font-display text-3xl font-bold text-primary-600 sm:text-4xl">{value}</span>
               <span className="text-xs font-medium uppercase tracking-wide text-ink-400">{label}</span>
             </div>
           ))}

@@ -9,12 +9,12 @@ type Size = "sm" | "md" | "lg";
 
 const variantClasses: Record<Variant, string> = {
   primary:
-    "bg-terracotta-500 text-white hover:bg-terracotta-600 shadow-sm shadow-terracotta-900/20",
+    "bg-primary-500 text-white hover:bg-primary-600 shadow-sm shadow-primary-900/20",
   secondary:
-    "bg-ink-800 text-cream-50 hover:bg-ink-700",
+    "bg-ink-800 text-surface-50 hover:bg-ink-700",
   outline:
-    "border border-ink-800/20 text-ink-800 hover:border-terracotta-500 hover:text-terracotta-600",
-  ghost: "text-ink-800 hover:text-terracotta-600",
+    "border border-ink-800/20 text-ink-800 hover:border-primary-500 hover:text-primary-600",
+  ghost: "text-ink-800 hover:text-primary-600",
 };
 
 const sizeClasses: Record<Size, string> = {

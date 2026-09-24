@@ -45,8 +45,8 @@ export default function Gallery() {
                 onClick={() => setFilter(f.key)}
                 className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
                   filter === f.key
-                    ? "bg-terracotta-500 text-white"
-                    : "bg-white text-ink-600 border border-ink-800/10 hover:border-terracotta-300"
+                    ? "bg-primary-500 text-white"
+                    : "bg-white text-ink-600 border border-ink-800/10 hover:border-primary-300"
                 }`}
               >
                 {t(f.labelKey)}
@@ -78,7 +78,7 @@ export default function Gallery() {
           onClick={() => setLightbox(null)}
         >
           <button
-            className="absolute right-6 top-6 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-cream-50 hover:bg-white/20"
+            className="absolute right-6 top-6 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-surface-50 hover:bg-white/20"
             aria-label="Close"
           >
             <FontAwesomeIcon icon={icons.close} className="text-xl" />

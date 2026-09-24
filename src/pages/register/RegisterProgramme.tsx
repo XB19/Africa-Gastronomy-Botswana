@@ -24,20 +24,20 @@ export default function RegisterProgramme() {
           <button
             key={programme.id}
             onClick={() => select(programme.id)}
-            className={`flex flex-col items-start gap-3 border p-6 text-left transition-colors hover:border-terracotta-400 ${
+            className={`flex flex-col items-start gap-3 border p-6 text-left transition-colors hover:border-primary-400 ${
               programmeId === programme.id
-                ? "border-terracotta-500 bg-terracotta-50"
+                ? "border-primary-500 bg-primary-50"
                 : "border-ink-800/8 bg-white"
             }`}
           >
-            <span className="flex h-11 w-11 items-center justify-center bg-terracotta-50 text-terracotta-600">
+            <span className="flex h-11 w-11 items-center justify-center bg-primary-50 text-primary-600">
               <FontAwesomeIcon icon={dataIconMap[programme.icon]} />
             </span>
             <div>
-              <h3 className="font-display text-base font-semibold text-terracotta-700">{programme.title}</h3>
+              <h3 className="font-display text-base font-semibold text-primary-700">{programme.title}</h3>
               <p className="mt-1 text-sm text-ink-500">{programme.description}</p>
             </div>
-            <span className="mt-auto flex items-center gap-1.5 text-xs font-semibold text-terracotta-600">
+            <span className="mt-auto flex items-center gap-1.5 text-xs font-semibold text-primary-600">
               Select <FontAwesomeIcon icon={icons.arrowRight} className="text-[10px]" />
             </span>
           </button>

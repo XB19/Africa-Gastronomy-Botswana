@@ -38,7 +38,7 @@ export default function AfricanGastronomy() {
                 className="aspect-[4/3] w-full object-cover"
               />
               <div className="flex flex-col gap-4">
-                <span className="flex h-12 w-12 items-center justify-center bg-terracotta-50 text-terracotta-600">
+                <span className="flex h-12 w-12 items-center justify-center bg-primary-50 text-primary-600">
                   <FontAwesomeIcon icon={section.icon} className="text-xl" />
                 </span>
                 <h2 className="font-display text-2xl font-semibold text-ink-800 sm:text-3xl">
@@ -51,7 +51,7 @@ export default function AfricanGastronomy() {
         </Container>
       </section>
 
-      <section className="bg-cream-200/50 py-16">
+      <section className="bg-surface-200/50 py-16">
         <Container>
           <div className="grid grid-cols-3 gap-3 sm:grid-cols-6">
             {Array.from({ length: 12 }).map((_, i) => (
