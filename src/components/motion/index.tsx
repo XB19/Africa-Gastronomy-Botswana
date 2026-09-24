@@ -4,7 +4,6 @@ import {
   animate,
   inView,
   motion,
-  stagger,
   useInView,
   useReducedMotion,
   useScroll,
@@ -43,11 +42,13 @@ interface StaggerProps {
   step?: number;
 }
 
-// Drop-in replacement for a grid/list wrapper: its direct children cascade
-// in one after another when the wrapper enters the viewport. Children are
+// Drop-in replacement for a grid/list wrapper: its direct children rise
+// into place as each one scrolls into view, and children that enter together
+// cascade one after another. Every child is observed on its own, so very tall
+// grids (e.g. the full gallery) work as well as short ones. Children are
 // animated as plain DOM nodes, so they can stay Links, cards, whatever.
-// Children added later (tab/filter changes) simply appear without being
-// hidden first.
+// Children added after mount (tab/filter changes) appear without animation,
+// unless the parent remounts the Stagger with a new `key`.
 export function Stagger({
   as: Tag = "div",
   children,
@@ -62,28 +63,40 @@ export function Stagger({
     const el = ref.current;
     if (!el || reduce) return;
     const items = Array.from(el.children) as HTMLElement[];
+    const reset = (item: HTMLElement) => {
+      item.style.removeProperty("opacity");
+      item.style.removeProperty("transform");
+    };
     items.forEach((item) => {
       item.style.opacity = "0";
       item.style.transform = "translateY(28px)";
     });
 
-    return inView(
-      el,
-      () => {
+    let batchStart = 0;
+    let batchIndex = 0;
+    const stop = inView(
+      items,
+      (item) => {
+        const now = performance.now();
+        if (now - batchStart > 150) {
+          batchStart = now;
+          batchIndex = 0;
+        }
+        // Cap the cascade so big batches never leave items waiting long.
+        const itemDelay = Math.min(delay + batchIndex++ * step, 0.6);
         animate(
-          items,
+          item,
           { opacity: [0, 1], transform: ["translateY(28px)", "translateY(0px)"] },
-          { duration: 0.7, ease: EASE, delay: stagger(step, { startDelay: delay }) }
-        ).then(() => {
-          items.forEach((item) => {
-            item.style.removeProperty("opacity");
-            item.style.removeProperty("transform");
-          });
-        });
+          { duration: 0.7, ease: EASE, delay: itemDelay }
+        ).then(() => reset(item as HTMLElement));
       },
-      { amount: 0.15 }
+      { amount: 0.1 }
     );
-    // Only the first mount is staggered; later children render normally.
+
+    return () => {
+      stop();
+      items.forEach(reset);
+    };
   }, [delay, step, reduce]);
 
   return (
@@ -93,32 +106,37 @@ export function Stagger({
   );
 }
 
-// Counts up to the numeric part of a stat ("20+", "50+", "1st", 12) when it
-// scrolls into view. Values with no leading number render unchanged.
+// Counts up to the numeric part of a stat ("20+", "50+", "1st", 12) once,
+// the first time it scrolls into view. Values with no leading number render
+// unchanged.
 export function CountUp({ value, className = "" }: { value: string | number; className?: string }) {
   const text = String(value);
   const match = text.match(/^(\d+)(.*)$/);
+  const hasNumber = match !== null;
   const target = match ? parseInt(match[1], 10) : 0;
   const suffix = match ? match[2] : "";
 
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.6 });
   const reduce = useReducedMotion();
-  const [display, setDisplay] = useState(match && !reduce ? 0 : target);
+  const [display, setDisplay] = useState(0);
 
+  // Deps are primitives only: the animation runs once when the stat becomes
+  // visible and is never restarted by its own re-renders.
   useEffect(() => {
-    if (!match || !isInView || reduce) return;
+    if (!hasNumber || !isInView || reduce) return;
     const controls = animate(0, target, {
       duration: 1.6,
       ease: EASE,
       onUpdate: (v) => setDisplay(Math.round(v)),
+      onComplete: () => setDisplay(target),
     });
     return () => controls.stop();
-  }, [isInView, target, reduce, match]);
+  }, [hasNumber, isInView, target, reduce]);
 
   return (
     <span ref={ref} className={`tabular-nums ${className}`}>
-      {match ? `${display}${suffix}` : text}
+      {hasNumber ? `${reduce ? target : display}${suffix}` : text}
     </span>
   );
 }
@@ -149,13 +167,14 @@ export function ParallaxImage({ src, alt = "", className = "", strength = 60 }: 
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], [-strength, strength]);
+  const reduce = useReducedMotion();
 
   return (
     <div ref={ref} className="absolute inset-0 overflow-hidden">
       <motion.img
         src={src}
         alt={alt}
-        style={{ y }}
+        style={reduce ? undefined : { y }}
         className={`absolute inset-x-0 -top-[10%] h-[120%] w-full object-cover ${className}`}
       />
     </div>

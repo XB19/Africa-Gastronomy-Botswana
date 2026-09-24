@@ -1,7 +1,8 @@
+import { useRef } from "react";
 import type { PropsWithChildren } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { icons } from "../../lib/icons";
 import { Container } from "./Container";
 import { EASE } from "../motion/ease";
@@ -27,14 +28,16 @@ interface PageHeroProps {
 export function PageHero({ kicker, title, subtitle, image, children }: PropsWithChildren<PageHeroProps>) {
   const navigate = useNavigate();
   // Background drifts down and the copy fades as the banner scrolls away.
-  const { scrollY } = useScroll();
-  const imageY = useTransform(scrollY, [0, 600], [0, 140]);
-  const copyOpacity = useTransform(scrollY, [0, 400], [1, 0.2]);
+  const sectionRef = useRef<HTMLElement>(null);
+  const reduce = useReducedMotion();
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end start"] });
+  const imageY = useTransform(scrollYProgress, [0, 1], [0, 140]);
+  const copyOpacity = useTransform(scrollYProgress, [0.4, 0.9], [1, 0.2]);
 
   return (
-    <section className="relative flex h-[400px] flex-col overflow-hidden bg-ink-800 sm:h-[480px] lg:h-[560px]">
+    <section ref={sectionRef} className="relative flex h-[400px] flex-col overflow-hidden bg-ink-800 sm:h-[480px] lg:h-[560px]">
       {image && (
-        <motion.div className="absolute inset-0" style={{ y: imageY }}>
+        <motion.div className="absolute inset-0" style={reduce ? undefined : { y: imageY }}>
           <motion.img
             src={image}
             alt=""
@@ -62,7 +65,7 @@ export function PageHero({ kicker, title, subtitle, image, children }: PropsWith
       <div className="flex-1" />
 
       <Container className="relative pb-10 sm:pb-14 lg:pb-16">
-        <motion.div className="flex flex-col gap-3" style={{ opacity: copyOpacity }}>
+        <motion.div className="flex flex-col gap-3" style={reduce ? undefined : { opacity: copyOpacity }}>
           <motion.h1
             {...rise(0.2)}
             className="max-w-4xl font-display text-4xl font-bold leading-[1.05] text-surface-50 text-balance sm:text-5xl lg:text-7xl">

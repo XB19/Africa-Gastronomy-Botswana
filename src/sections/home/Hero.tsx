@@ -1,5 +1,6 @@
+import { useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icons } from "../../lib/icons";
 import { paths } from "../../router/paths";
@@ -17,14 +18,19 @@ const rise = (delay: number) => ({
 
 export function Hero() {
   const { t } = useTranslation();
-  const { scrollY } = useScroll();
-  const imageY = useTransform(scrollY, [0, 800], [0, 220]);
-  const copyY = useTransform(scrollY, [0, 800], [0, -60]);
-  const copyOpacity = useTransform(scrollY, [0, 550], [1, 0]);
+  // Scroll effects are measured against the hero itself (0 = hero top at the
+  // viewport top, 1 = hero fully scrolled past), so they behave the same on
+  // a short desktop hero and a tall mobile one.
+  const sectionRef = useRef<HTMLElement>(null);
+  const reduce = useReducedMotion();
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end start"] });
+  const imageY = useTransform(scrollYProgress, [0, 1], [0, 220]);
+  const copyY = useTransform(scrollYProgress, [0, 1], [0, -60]);
+  const copyOpacity = useTransform(scrollYProgress, [0.5, 0.95], [1, 0]);
 
   return (
-    <section className="relative overflow-hidden bg-ink-800">
-      <motion.div className="absolute inset-0" style={{ y: imageY }}>
+    <section ref={sectionRef} className="relative overflow-hidden bg-ink-800">
+      <motion.div className="absolute inset-0" style={reduce ? undefined : { y: imageY }}>
         {/* Slow "Ken Burns" push-in on load. */}
         <motion.img
           src={pick(foodImages, 4)}
@@ -38,7 +44,7 @@ export function Hero() {
       </motion.div>
 
       <Container className="relative flex min-h-[78vh] flex-col justify-end pb-14 pt-28 sm:min-h-[82vh]">
-        <motion.div className="flex flex-col gap-6" style={{ y: copyY, opacity: copyOpacity }}>
+        <motion.div className="flex flex-col gap-6" style={reduce ? undefined : { y: copyY, opacity: copyOpacity }}>
           <h1 className="max-w-4xl font-display text-5xl font-bold leading-[1.03] text-surface-50 text-balance sm:text-6xl lg:text-7xl">
             {/* Each line is revealed from behind a mask. */}
             <span className="block overflow-hidden pb-1">
