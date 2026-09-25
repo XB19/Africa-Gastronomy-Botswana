@@ -35,10 +35,10 @@ export function CountriesSection() {
                 <span className="text-sm font-semibold text-ink-800">{country.name}</span>
                 <span
                   className={`text-[10px] font-bold uppercase tracking-wide ${
-                    country.status === "confirmed" ? "text-forest-500" : "text-ink-400"
+                    country.status === "delegation" ? "text-forest-500" : "text-ink-400"
                   }`}
                 >
-                  {country.status === "confirmed" ? "Confirmed" : "Invited"}
+                  {country.status === "delegation" ? "Featured chefs" : "Network"}
                 </span>
               </div>
             </div>

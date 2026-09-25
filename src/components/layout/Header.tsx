@@ -54,6 +54,7 @@ export function Header() {
     { to: paths.countries, label: t("nav.countries") },
     { to: paths.calendar, label: t("nav.calendar") },
     { to: paths.dashboard, label: t("nav.dashboard") },
+    { to: paths.uganda, label: t("nav.uganda") },
   ];
 
   // The info bar scrolls away with the page; the sticky bar below keeps a
@@ -74,7 +75,7 @@ export function Header() {
       >
         <div className="mx-auto flex max-w-8xl items-center justify-between gap-4 px-5 py-5 sm:px-8 lg:px-12">
           <NavLink to={paths.home} className="flex shrink-0 items-center gap-3">
-            <img src={logo} alt="Africa Gastronomy Botswana" className="h-12 w-12" />
+            <img src={logo} alt="Africa Gastronomique Botswana" className="h-12 w-12" />
             <div className="hidden leading-tight sm:block">
               <span className="block font-display text-[15px] font-bold text-ink-800">FIGA Botswana</span>
               <span className="block text-[10px] font-semibold uppercase tracking-widest text-primary-600">
@@ -201,6 +202,7 @@ export function Header() {
                     { to: paths.countries, label: t("nav.countries") },
                     { to: paths.calendar, label: t("nav.calendar") },
                     { to: paths.dashboard, label: t("nav.dashboard") },
+                    { to: paths.uganda, label: t("nav.uganda") },
                     { to: paths.gallery, label: t("nav.gallery") },
                     { to: paths.partners, label: t("nav.partners") },
                     { to: paths.contact, label: t("nav.contact") },

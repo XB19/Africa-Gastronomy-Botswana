@@ -4,26 +4,19 @@ import { icons } from "../lib/icons";
 import { PageHero } from "../components/ui/PageHero";
 import { Container } from "../components/ui/Container";
 import { CountdownTimer } from "../components/ui/CountdownTimer";
-import { programmes } from "../data/programmes";
-import { countries } from "../data/countries";
-import { chefProfiles } from "../data/chefs";
-import { registrationCategories } from "../data/categories";
-import { kitchenImages, pick } from "../lib/images";
+import { SectionHeading } from "../components/ui/SectionHeading";
+import { expectedOutcomes, impactIndicators, monitoring, participationTargets } from "../data/impact";
+import { eventPhotos } from "../lib/images";
 import { CountUp, ProgressBar, Stagger } from "../components/motion";
 
-const breakdown = [
-  { label: "Masterclasses", count: programmes.filter((p) => p.type === "masterclass").length, color: "bg-primary-500" },
-  { label: "Competitions", count: programmes.filter((p) => p.type === "competition").length, color: "bg-gold-500" },
-  { label: "Exhibitions", count: programmes.filter((p) => p.type === "exhibition").length, color: "bg-forest-500" },
-];
-const breakdownTotal = breakdown.reduce((sum, b) => sum + b.count, 0) || 1;
-
 const topStats = [
-  { icon: icons.users, label: "Chefs & Speakers", value: chefProfiles.length },
-  { icon: icons.earthAfrica, label: "Confirmed Countries", value: countries.filter((c) => c.status === "confirmed").length },
-  { icon: icons.globe, label: "Invited Countries", value: countries.filter((c) => c.status === "invited").length },
-  { icon: icons.calendar, label: "Programme Items", value: programmes.length },
+  { icon: icons.users, label: "Direct Participants (approx.)", value: "1000" },
+  { icon: icons.earthAfrica, label: "African Countries Targeted", value: "20" },
+  { icon: icons.userTie, label: "International Chefs & Experts", value: "50" },
+  { icon: icons.calendar, label: "Days of Programming", value: "4" },
 ];
+
+const maxTarget = Math.max(...participationTargets.map((p) => p.target));
 
 export default function DashboardPage() {
   const { t } = useTranslation();
@@ -34,13 +27,13 @@ export default function DashboardPage() {
         kicker={t("dashboardPage.hero.kicker")}
         title={t("dashboardPage.hero.title")}
         subtitle={t("dashboardPage.intro")}
-        image={pick(kitchenImages, 7)}
+        image={eventPhotos.classroom}
       >
         <CountdownTimer variant="light" />
       </PageHero>
 
       <section className="py-16 sm:py-20">
-        <Container className="flex flex-col gap-10">
+        <Container className="flex flex-col gap-14">
           <Stagger className="grid grid-cols-2 gap-6 lg:grid-cols-4">
             {topStats.map((stat) => (
               <div key={stat.label} className="border border-ink-800/8 bg-white p-6 transition-[border-color,box-shadow,translate] duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-ink-900/8">
@@ -53,40 +46,65 @@ export default function DashboardPage() {
             ))}
           </Stagger>
 
-          <Stagger step={0.12} className="grid grid-cols-1 gap-6 lg:grid-cols-3">
-            <div className="border border-ink-800/8 bg-white p-7 lg:col-span-2">
-              <p className="text-sm font-semibold text-ink-500">Programme Mix</p>
-              <div className="mt-4 flex h-4 w-full overflow-hidden rounded-full bg-ink-800/8">
-                {breakdown.map((b) => (
-                  <ProgressBar key={b.label} className={b.color} percent={(b.count / breakdownTotal) * 100} />
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+            <div className="border border-ink-800/8 bg-white p-7">
+              <p className="text-sm font-semibold text-ink-500">Target participation by category</p>
+              <div className="mt-5 flex flex-col gap-4">
+                {participationTargets.map((p) => (
+                  <div key={p.category} className="flex flex-col gap-1.5">
+                    <div className="flex items-center justify-between gap-4 text-sm">
+                      <span className="text-ink-600">{p.category}</span>
+                      <span className="font-bold text-ink-800">{p.target}</span>
+                    </div>
+                    <div className="h-1.5 w-full overflow-hidden bg-ink-800/8">
+                      <ProgressBar className="h-full bg-primary-500" percent={(p.target / maxTarget) * 100} />
+                    </div>
+                  </div>
                 ))}
               </div>
-              <div className="mt-4 flex flex-wrap gap-x-8 gap-y-2">
-                {breakdown.map((b) => (
-                  <span key={b.label} className="flex items-center gap-2 text-sm text-ink-600">
-                    <span className={`h-2.5 w-2.5 rounded-full ${b.color}`} />
-                    {b.label} <span className="font-bold text-ink-800">{b.count}</span>
-                  </span>
-                ))}
-              </div>
+              <p className="mt-6 text-xs text-ink-400">
+                Total direct participants: approximately 1,000. Countries targeted: 20 African countries.
+              </p>
             </div>
 
             <div className="border border-ink-800/8 bg-white p-7">
-              <p className="text-sm font-semibold text-ink-500">Registration Categories</p>
-              <div className="mt-4 flex flex-col gap-3">
-                {registrationCategories.map((cat) => (
-                  <div key={cat.id} className="flex items-center justify-between text-sm">
-                    <span className="text-ink-700">{cat.name}</span>
-                    <span className="font-semibold text-primary-600">{cat.price}</span>
+              <p className="text-sm font-semibold text-ink-500">Impact indicators</p>
+              <div className="mt-5 flex flex-col divide-y divide-ink-800/8">
+                {impactIndicators.map((i) => (
+                  <div key={i.indicator} className="flex items-start justify-between gap-4 py-3 text-sm">
+                    <div className="flex flex-col">
+                      <span className="text-ink-700">{i.indicator}</span>
+                      <span className="text-[11px] font-bold uppercase tracking-wide text-ink-400">{i.area}</span>
+                    </div>
+                    <span className="shrink-0 font-bold text-primary-600">{i.target}</span>
                   </div>
                 ))}
               </div>
             </div>
-          </Stagger>
+          </div>
 
-          <div className="border border-dashed border-ink-800/15 bg-surface-200/50 p-8 text-center text-sm text-ink-400">
-            Live registration counts, ticket sales and real-time delegate numbers will populate this dashboard
-            once connected to the CMS and registration system.
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
+            <SectionHeading title="Expected Outcomes" />
+            <ul className="flex flex-col gap-4">
+              {expectedOutcomes.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-ink-600">
+                  <FontAwesomeIcon icon={icons.check} className="mt-1 shrink-0 text-primary-500" />
+                  <span className="leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="border border-ink-800/8 bg-white p-7">
+            <p className="text-sm font-semibold text-ink-500">Monitoring and evaluation</p>
+            <div className="mt-4 grid grid-cols-1 gap-x-10 sm:grid-cols-2">
+              {monitoring.map((m) => (
+                <div key={m.indicator} className="flex items-start justify-between gap-4 border-b border-ink-800/8 py-3 text-sm">
+                  <span className="font-medium text-ink-700">{m.indicator}</span>
+                  <span className="text-right text-ink-500">{m.measurement}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </Container>
       </section>

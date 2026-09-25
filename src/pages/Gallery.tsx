@@ -4,12 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icons } from "../lib/icons";
 import { PageHero } from "../components/ui/PageHero";
 import { Container } from "../components/ui/Container";
-import { foodImages, kitchenImages, pick } from "../lib/images";
+import { eventGallery, foodImages, kitchenImages, pick, ugandaChallenge, ugandaFood } from "../lib/images";
 import { AnimatePresence, motion } from "framer-motion";
 import { Stagger } from "../components/motion";
 import { EASE } from "../components/motion/ease";
 
-type Filter = "all" | "food" | "kitchen";
+type Filter = "all" | "food" | "kitchen" | "events" | "uganda";
 
 export default function Gallery() {
   const { t } = useTranslation();
@@ -19,7 +19,9 @@ export default function Gallery() {
   const items = useMemo(() => {
     const food = foodImages.map((src) => ({ src, category: "food" as const }));
     const kitchen = kitchenImages.map((src) => ({ src, category: "kitchen" as const }));
-    const all = [...food, ...kitchen];
+    const events = eventGallery.map((src) => ({ src, category: "events" as const }));
+    const uganda = [...ugandaChallenge, ...ugandaFood].map((src) => ({ src, category: "uganda" as const }));
+    const all = [...events, ...uganda, ...food, ...kitchen];
     if (filter === "all") return all;
     return all.filter((i) => i.category === filter);
   }, [filter]);
@@ -28,6 +30,8 @@ export default function Gallery() {
     { key: "all", labelKey: "galleryPage.filters.all" },
     { key: "food", labelKey: "galleryPage.filters.food" },
     { key: "kitchen", labelKey: "galleryPage.filters.kitchen" },
+    { key: "events", labelKey: "galleryPage.filters.events" },
+    { key: "uganda", labelKey: "galleryPage.filters.uganda" },
   ];
 
   return (

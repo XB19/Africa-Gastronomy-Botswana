@@ -59,7 +59,7 @@ export default function Programmes() {
                     <span className="flex h-11 w-11 items-center justify-center bg-primary-50 text-primary-600">
                       <FontAwesomeIcon icon={dataIconMap[programme.icon]} />
                     </span>
-                    <Badge>{programme.day}</Badge>
+                    <Badge>{programme.day} · {programme.time}</Badge>
                   </div>
                   <h3 className="font-display text-lg font-semibold text-primary-700">{programme.title}</h3>
                   <p className="text-sm leading-relaxed text-ink-500">{programme.description}</p>

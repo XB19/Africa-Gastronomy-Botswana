@@ -2,16 +2,16 @@ import { useTranslation } from "react-i18next";
 import { Container } from "../../components/ui/Container";
 import { SectionHeading } from "../../components/ui/SectionHeading";
 import { PhotoStrip } from "../../components/ui/PhotoStrip";
-import { kitchenImages, pick } from "../../lib/images";
+import { eventPhotos } from "../../lib/images";
 import { CountUp, Reveal, Stagger } from "../../components/motion";
 
 export function Intro() {
   const { t } = useTranslation();
 
   const strip = [
-    { image: pick(kitchenImages, 0), eyebrow: "Africa Gastronomy", title: "Culinary Heritage" },
-    { image: pick(kitchenImages, 1), eyebrow: "FIGA Botswana", title: "Chefs in Action" },
-    { image: pick(kitchenImages, 2), eyebrow: "Gaborone 2026", title: "The Gastronomy Stage" },
+    { image: eventPhotos.team, eyebrow: "Africa Gastronomique", title: "Culinary Heritage" },
+    { image: eventPhotos.chefsGroup, eyebrow: "FIGA", title: "Chefs Together" },
+    { image: eventPhotos.gaborone, eyebrow: "Gaborone 2026", title: "The Host City" },
   ];
 
   const stats: [string, string][] = [

@@ -7,7 +7,6 @@ import { paths } from "../../router/paths";
 import { Container } from "../../components/ui/Container";
 import { LinkButton } from "../../components/ui/Button";
 import { CountdownTimer } from "../../components/ui/CountdownTimer";
-import { foodImages, pick } from "../../lib/images";
 import { EASE } from "../../components/motion/ease";
 
 const rise = (delay: number) => ({
@@ -31,21 +30,28 @@ export function Hero() {
   return (
     <section ref={sectionRef} className="relative overflow-hidden bg-ink-800">
       <motion.div className="absolute inset-0" style={reduce ? undefined : { y: imageY }}>
-        {/* Slow "Ken Burns" push-in on load. */}
-        <motion.img
-          src={pick(foodImages, 4)}
-          alt=""
-          className="h-full w-full object-cover opacity-50"
-          initial={{ scale: 1.2 }}
-          animate={{ scale: 1.02 }}
-          transition={{ duration: 9, ease: "easeOut" }}
-        />
+        {reduce ? (
+          <img src="/videos/hero-poster.jpg" alt="" className="h-full w-full object-cover opacity-50" />
+        ) : (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            poster="/videos/hero-poster.jpg"
+            aria-hidden
+            className="h-full w-full object-cover opacity-50"
+          >
+            <source src="/videos/hero-loop.mp4" type="video/mp4" />
+          </video>
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-ink-900/95 via-ink-900/55 to-ink-900/35" />
       </motion.div>
 
       <Container className="relative flex min-h-[78vh] flex-col justify-end pb-14 pt-28 sm:min-h-[82vh]">
         <motion.div className="flex flex-col gap-6" style={reduce ? undefined : { y: copyY, opacity: copyOpacity }}>
-          <h1 className="max-w-4xl font-display text-5xl font-bold leading-[1.03] text-surface-50 text-balance sm:text-6xl lg:text-7xl">
+          <h1 className="max-w-4xl font-display text-4xl font-bold leading-[1.05] text-surface-50 text-balance sm:text-5xl lg:text-6xl">
             {/* Each line is revealed from behind a mask. */}
             <span className="block overflow-hidden pb-1">
               <motion.span

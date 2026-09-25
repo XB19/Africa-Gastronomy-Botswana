@@ -5,23 +5,17 @@ import { Container } from "../../components/ui/Container";
 import { SectionHeading } from "../../components/ui/SectionHeading";
 import { LinkButton } from "../../components/ui/Button";
 import { paths } from "../../router/paths";
-import { programmes } from "../../data/programmes";
-import { countries } from "../../data/countries";
-import { chefProfiles } from "../../data/chefs";
+import { participationTargets } from "../../data/impact";
 import { CountUp, ProgressBar, Stagger } from "../../components/motion";
 
 const stats = [
-  { icon: icons.users, label: "Chefs & Speakers Confirmed", value: chefProfiles.length, target: 50 },
-  { icon: icons.earthAfrica, label: "Countries Represented", value: countries.filter((c) => c.status === "confirmed").length, target: countries.length },
-  { icon: icons.calendar, label: "Programme Items Announced", value: programmes.length, target: 30 },
+  { icon: icons.users, label: "Direct Participants (approx.)", value: "1000" },
+  { icon: icons.earthAfrica, label: "African Countries Targeted", value: "20" },
+  { icon: icons.handshake, label: "B2B Meetings Facilitated", value: "50+" },
 ];
 
-const breakdown = [
-  { label: "Masterclasses", count: programmes.filter((p) => p.type === "masterclass").length, color: "bg-primary-500" },
-  { label: "Competitions", count: programmes.filter((p) => p.type === "competition").length, color: "bg-gold-500" },
-  { label: "Exhibitions", count: programmes.filter((p) => p.type === "exhibition").length, color: "bg-forest-500" },
-];
-const breakdownTotal = breakdown.reduce((sum, b) => sum + b.count, 0) || 1;
+const top = participationTargets.slice(0, 5);
+const max = Math.max(...top.map((p) => p.target));
 
 export function DashboardSection() {
   const { t } = useTranslation();
@@ -42,31 +36,28 @@ export function DashboardSection() {
 
         <Stagger className="grid grid-cols-1 gap-px bg-ink-800/8 lg:grid-cols-3">
           {stats.map((stat) => (
-            <div key={stat.label} className="group relative transition-shadow duration-300 hover:z-10 hover:shadow-2xl hover:shadow-ink-900/10 bg-white p-7">
+            <div key={stat.label} className="group relative bg-white p-7 transition-shadow duration-300 hover:z-10 hover:shadow-2xl hover:shadow-ink-900/10">
               <div className="flex items-center justify-between">
                 <FontAwesomeIcon icon={stat.icon} className="text-lg text-primary-500" />
                 <CountUp value={stat.value} className="font-display text-3xl font-bold text-ink-800" />
               </div>
               <p className="mt-4 text-sm font-semibold text-ink-500">{stat.label}</p>
-              <div className="mt-3 h-1 w-full overflow-hidden bg-ink-800/8">
-                <ProgressBar className="h-full bg-primary-500" percent={Math.min(100, (stat.value / stat.target) * 100)} />
-              </div>
             </div>
           ))}
 
           <div className="bg-white p-7 lg:col-span-3">
-            <p className="text-sm font-semibold text-ink-500">Programme Mix</p>
-            <div className="mt-4 flex h-3 w-full overflow-hidden bg-ink-800/8">
-              {breakdown.map((b) => (
-                <ProgressBar key={b.label} className={b.color} percent={(b.count / breakdownTotal) * 100} />
-              ))}
-            </div>
-            <div className="mt-4 flex flex-wrap gap-x-8 gap-y-2">
-              {breakdown.map((b) => (
-                <span key={b.label} className="flex items-center gap-2 text-sm text-ink-600">
-                  <span className={`h-2.5 w-2.5 rounded-full ${b.color}`} />
-                  {b.label} <span className="font-bold text-ink-800">{b.count}</span>
-                </span>
+            <p className="text-sm font-semibold text-ink-500">Participation targets</p>
+            <div className="mt-5 flex flex-col gap-4">
+              {top.map((p) => (
+                <div key={p.category} className="flex flex-col gap-1.5">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-ink-600">{p.category}</span>
+                    <span className="font-bold text-ink-800">{p.target}</span>
+                  </div>
+                  <div className="h-1.5 w-full overflow-hidden bg-ink-800/8">
+                    <ProgressBar className="h-full bg-primary-500" percent={(p.target / max) * 100} />
+                  </div>
+                </div>
               ))}
             </div>
           </div>

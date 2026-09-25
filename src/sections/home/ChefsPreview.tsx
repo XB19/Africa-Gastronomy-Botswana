@@ -11,8 +11,8 @@ export function ChefsPreview() {
   const { t } = useTranslation();
   const items = chefProfiles.slice(0, 4).map((chef) => ({
     image: chef.image,
-    eyebrow: chef.category,
-    title: chef.role,
+    eyebrow: chef.country,
+    title: chef.name.replace("Chef ", ""),
   }));
 
   return (

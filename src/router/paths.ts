@@ -10,6 +10,7 @@ export const paths = {
   calendar: "/event-calendar",
   dashboard: "/dashboard",
   contact: "/contact",
+  uganda: "/hospitality-skills-challenge-uganda",
   register: "/register",
   registerDetails: "/register/details",
   registerCategory: "/register/category",

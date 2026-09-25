@@ -45,7 +45,7 @@ export function ProgrammesHighlight() {
               <h3 className="font-display text-lg font-semibold text-primary-700">{programme.title}</h3>
               <p className="text-sm leading-relaxed text-ink-500">{programme.description}</p>
               <div className="mt-auto flex items-center justify-between pt-2">
-                <span className="text-xs font-semibold uppercase tracking-wide text-ink-400">{programme.day}</span>
+                <span className="text-xs font-semibold uppercase tracking-wide text-ink-400">{programme.day} · {programme.time}</span>
                 <ArrowButton variant="outline" />
               </div>
             </div>

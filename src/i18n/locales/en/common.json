@@ -1,9 +1,11 @@
 {
   "meta": {
     "eventName": "FIGA Botswana 2026",
-    "orgName": "Africa Gastronomy Botswana",
+    "fullName": "International Forum of African Gastronomy",
+    "orgName": "Africa Gastronomique Botswana",
     "dates": "11–14 November 2026",
-    "location": "Gaborone, Botswana"
+    "location": "Gaborone, Botswana",
+    "theme": "African Gastronomy: Driving Tourism, Culture, Food Security and Economic Development"
   },
   "nav": {
     "home": "Home",
@@ -15,6 +17,7 @@
     "calendar": "Event Calendar",
     "dashboard": "Dashboard",
     "gallery": "Gallery",
+    "uganda": "Uganda Challenge",
     "partners": "Partners & Sponsors",
     "contact": "Contact / FAQ",
     "register": "Register Now"
@@ -25,14 +28,13 @@
     "readMore": "Read More",
     "registerNow": "Register Now",
     "getInvolved": "Get Involved",
-    "downloadBrochure": "Download Brochure",
+    "downloadBrochure": "Download Sponsoring Dossier",
     "days": "Days",
     "hours": "Hours",
     "minutes": "Minutes",
     "seconds": "Seconds",
     "comingSoon": "Content coming soon",
     "backHome": "Back to Home",
-    "placeholderNote": "Placeholder content — to be finalised via the CMS.",
     "language": "Language"
   },
   "header": {
@@ -40,7 +42,7 @@
     "cta": "Register Now"
   },
   "footer": {
-    "about": "Africa Gastronomy Botswana celebrates the richness of African culinary heritage — bringing together chefs, speakers, competitors and food lovers from across the continent and beyond.",
+    "about": "Africa Gastronomique Botswana (AFGAB) hosts the International Forum of African Gastronomy — FIGA Botswana 2026 — bringing chefs, policymakers, investors, educators and producers together in Gaborone.",
     "quickLinks": "Quick Links",
     "explore": "Explore",
     "contact": "Contact",
@@ -49,156 +51,276 @@
     "emailPlaceholder": "Your email address",
     "subscribe": "Subscribe",
     "rights": "All rights reserved.",
-    "address": "Gaborone International Convention Centre, Gaborone, Botswana",
-    "email": "info@africagastronomybotswana.com",
-    "phone": "+267 000 0000"
+    "address": "Gaborone, Botswana",
+    "phone": "+267 72 486 352",
+    "phone2": "+267 71 452 085"
   },
   "home": {
     "hero": {
       "kicker": "11–14 November 2026 · Gaborone, Botswana",
-      "title": "Africa Gastronomy Botswana",
-      "titleAccent": "FIGA 2026",
-      "subtitle": "Four days celebrating African culinary heritage — chefs, competitions, masterclasses and the flavours of a continent, hosted for the first time in Gaborone.",
+      "title": "International Forum of African Gastronomy",
+      "titleAccent": "FIGA Botswana 2026",
+      "subtitle": "African Gastronomy: Driving Tourism, Culture, Food Security and Economic Development. Four days of conferences, masterclasses, competitions, exhibitions, B2B engagements and a Gala Dinner.",
       "ctaPrimary": "Register Now",
       "ctaSecondary": "Explore the Programme",
       "countdownLabel": "Counting down to FIGA Botswana 2026"
     },
     "intro": {
       "kicker": "Who We Are",
-      "title": "Africa Gastronomy Botswana",
-      "text": "Africa Gastronomy Botswana is a platform dedicated to showcasing and promoting African gastronomy — celebrating Botswana's culinary heritage alongside the traditions, chefs and ingredients of the wider continent. Through competitions, masterclasses, exhibitions and cultural exchange, we bring Africa's food story to the world stage.",
-      "stat1Value": "20+",
-      "stat1Label": "Participating Countries",
-      "stat2Value": "50+",
-      "stat2Label": "Chefs & Speakers",
-      "stat3Value": "4",
-      "stat3Label": "Days of Programming",
-      "stat4Value": "1st",
-      "stat4Label": "Edition in Botswana"
+      "title": "Africa Gastronomique Botswana (AFGAB)",
+      "text": "Africa Gastronomique is a dynamic pan-African association of chefs, culinary professionals and passionate advocates of African cuisine. Its mission is to promote and elevate African gastronomy — with a particular focus on the richness of Botswana's culinary heritage — while transforming the perception of the restaurant and hospitality industries across the continent. Present in 26 African countries, the network preserves, modernises and celebrates the ancestral culinary arts of Africa.",
+      "stat1Value": "1000",
+      "stat1Label": "Direct Participants Targeted",
+      "stat2Value": "20",
+      "stat2Label": "African Countries Targeted",
+      "stat3Value": "50",
+      "stat3Label": "International Chefs & Experts",
+      "stat4Value": "4",
+      "stat4Label": "Days of Programming"
     },
     "visionMission": {
       "kicker": "Our Purpose",
-      "title": "Vision & Mission",
-      "visionTitle": "Our Vision",
-      "visionText": "A continent where African gastronomy is celebrated, preserved and recognised on the global culinary stage — driving pride, tourism and opportunity across Africa.",
-      "missionTitle": "Our Mission",
-      "missionText": "To create a premier platform that showcases African culinary heritage, empowers chefs and hospitality talent, and connects countries, communities and industry through the shared language of food."
+      "title": "Mission & Objective",
+      "visionTitle": "Our Mission",
+      "visionText": "To promote and elevate African gastronomy, showcasing the richness of Botswana's culinary heritage while transforming the perception of the restaurant and hospitality industries across the continent.",
+      "missionTitle": "Overall Objective",
+      "missionText": "To celebrate African gastronomy while building partnerships for sustainable growth, cultural preservation, and shared prosperity."
     },
     "activities": {
       "kicker": "What's On",
       "title": "Featured Activities",
-      "subtitle": "A programme built for chefs, industry professionals and food lovers alike.",
+      "subtitle": "Conferences, competitions, exhibitions and networking across four days in Gaborone.",
       "items": [
-        { "title": "Culinary Competitions", "text": "Chefs compete across categories judged by an international panel." },
-        { "title": "Masterclasses", "text": "Hands-on sessions led by celebrated chefs and culinary educators." },
-        { "title": "Exhibition Stalls", "text": "Producers, brands and partners showcase products and innovation." },
-        { "title": "Gala Dinner", "text": "A signature evening celebrating African flavours in style." },
-        { "title": "Cultural Showcases", "text": "Music, dance and heritage performances celebrating the participating countries." }
+        {
+          "title": "Pan-African Gastronomy Conference",
+          "text": "Panels on culinary tourism, indigenous foods, culinary entrepreneurship and intellectual property in gastronomy."
+        },
+        {
+          "title": "Masterclass Series",
+          "text": "African Cuisine Innovation, Food Styling and Personal Branding for Culinary Professionals."
+        },
+        {
+          "title": "Culinary Competitions",
+          "text": "Young African Chef Challenge, Local Inter Hotel Culinary Competition, African Fusion Culinary Competition and Plant Based Challenge."
+        },
+        {
+          "title": "Exhibition & Trade Fair",
+          "text": "Producers, SMEs and hospitality businesses engage directly with delegates, buyers and investors."
+        },
+        {
+          "title": "B2B Networking",
+          "text": "Sessions connecting investors, chefs, tourism operators, hospitality businesses, food producers and development partners."
+        },
+        {
+          "title": "Gala Dinner & Awards",
+          "text": "The African Gastronomy Gala Dinner and Awards & Recognition Ceremony close the forum on 14 November."
+        }
       ]
     },
     "programmes": {
       "kicker": "Programme",
       "title": "Programmes & Competitions",
-      "subtitle": "From masterclasses to flagship competitions — explore what's on at FIGA Botswana 2026.",
+      "subtitle": "Masterclasses, competitions and the Exhibition & Trade Fair at FIGA Botswana 2026.",
       "cta": "View Full Programme"
     },
     "countries": {
       "kicker": "United by Flavour",
       "title": "Participating Countries",
-      "subtitle": "Chefs and delegations from across Africa and beyond are confirming their participation.",
+      "subtitle": "FIGA Botswana 2026 targets 20 African countries, drawing on the Africa Gastronomique network.",
       "cta": "View All Countries"
     },
     "chefs": {
       "kicker": "Talent",
       "title": "Chefs & Speakers",
-      "subtitle": "Meet the culinary leaders, competitors and speakers shaping the FIGA Botswana programme.",
+      "subtitle": "Chefs from Botswana, Cameroon, Togo, Burkina Faso, Uganda, Ghana, Nigeria, Gabon, Congo-Brazzaville and Benin.",
       "cta": "Meet the Chefs & Speakers"
     },
     "dashboard": {
-      "kicker": "Live Overview",
-      "title": "Interactive Event Dashboard",
-      "subtitle": "A snapshot of FIGA Botswana 2026 as the countdown continues.",
-      "cta": "Open Full Dashboard"
+      "kicker": "Targets",
+      "title": "FIGA Botswana 2026 at a Glance",
+      "subtitle": "The participation and impact targets set for the forum.",
+      "cta": "See All Targets"
     },
     "gallery": {
       "kicker": "Moments",
       "title": "Gallery",
-      "subtitle": "A taste of the flavours, faces and moments from Africa Gastronomy events.",
+      "subtitle": "A taste of the flavours, faces and moments from Africa Gastronomique events.",
       "cta": "View Full Gallery"
     },
     "partners": {
-      "kicker": "With Thanks To",
+      "kicker": "Support the Forum",
       "title": "Partners & Sponsors",
-      "subtitle": "FIGA Botswana 2026 is made possible with the support of our partners.",
+      "subtitle": "Endorsed by the Botswana Tourism Organisation, with sponsorship packages from Bronze to Diamond.",
       "cta": "Become a Partner"
     },
     "registerCta": {
       "title": "Be Part of FIGA Botswana 2026",
-      "text": "Secure your place at the Gala Dinner, register for a competition, book a masterclass, or bring your brand as an exhibitor or sponsor.",
+      "text": "Sponsor the forum, take an exhibition space, or bring your brand to the Exhibition & Trade Fair.",
       "cta": "Start Your Registration"
     }
   },
   "about": {
-    "hero": { "kicker": "About Us", "title": "About Africa Gastronomy Botswana" },
-    "intro": { "title": "Our Story", "text": "Africa Gastronomy Botswana was founded to give African culinary heritage the stage it deserves — connecting chefs, communities, institutions and industry through a shared celebration of food. FIGA Botswana 2026 marks our flagship event, hosted in Gaborone." },
-    "vision": { "title": "Vision", "text": "A continent where African gastronomy is celebrated, preserved and recognised on the global culinary stage." },
-    "mission": { "title": "Mission", "text": "To create a premier platform that showcases African culinary heritage, empowers chefs and hospitality talent, and connects countries and communities through food." },
+    "hero": {
+      "kicker": "About Us",
+      "title": "About Africa Gastronomique Botswana"
+    },
+    "intro": {
+      "title": "Who Are We?",
+      "text": "We are Africa Gastronomique, a dynamic pan-African association of chefs, culinary professionals, and passionate advocates of African cuisine. United by a shared vision, our mission is to promote and elevate African gastronomy with a particular focus on showcasing the richness of Botswana culinary heritage while transforming the perception of the restaurant and hospitality industries across the continent."
+    },
+    "vision": {
+      "title": "Mission",
+      "text": "To promote and elevate African gastronomy, showcasing Botswana's culinary heritage while transforming the perception of the restaurant and hospitality industries across the continent."
+    },
+    "mission": {
+      "title": "Overall Objective",
+      "text": "To celebrate African gastronomy while building partnerships for sustainable growth, cultural preservation, and shared prosperity."
+    },
     "objectives": {
-      "title": "Objectives",
+      "title": "Specific Objectives",
+      "intro": "FIGA Botswana 2026 contributes directly to Botswana's strategic development priorities by:",
       "items": [
-        "Promote and preserve Botswana's and Africa's culinary heritage",
-        "Provide a platform for chefs, speakers and hospitality talent to shine",
-        "Foster cultural exchange between participating countries",
-        "Support tourism, trade and investment through gastronomy",
-        "Deliver a professional, world-class event experience in Gaborone"
+        "Promoting economic diversification through tourism, gastronomy and the creative economy",
+        "Supporting citizen economic empowerment through SME participation and entrepreneurship",
+        "Creating employment and skills development opportunities for young people",
+        "Promoting local procurement and value addition within the agrifood sector",
+        "Positioning Botswana as a preferred destination for Meetings, Incentives, Conferences and Exhibitions (MICE)",
+        "Strengthening regional integration and intra-African trade under the African Continental Free Trade Area (AfCFTA)",
+        "Advancing sustainable food systems through the promotion of indigenous foods and responsible sourcing"
       ]
     },
-    "leadership": { "title": "Leadership", "text": "Africa Gastronomy Botswana is guided by a dedicated organising team and advisory board drawn from the hospitality, culinary and events industries." }
+    "leadership": {
+      "title": "Leadership",
+      "text": "Africa Gastronomique Botswana is led by Chef Monana Motswaledi, President of the association. The Africa Gastronomique Organisation was founded by Chef Joseph Lancma of Cameroon."
+    },
+    "network": {
+      "title": "A Growing Pan-African Network",
+      "text": "Present in 26 African countries, our network is growing rapidly, bringing together diverse talents and traditions under one shared goal: to preserve, modernize, and celebrate the ancestral culinary arts of Africa. Through education, capacity-building, and cultural celebration, we empower chefs, culinary students, and food entrepreneurs via:",
+      "items": [
+        "Specialized training sessions and masterclasses",
+        "Cultural festivals and gastronomy fairs",
+        "Culinary competitions and international summits",
+        "Awareness campaigns on food safety and traditional knowledge",
+        "Research and documentation of indigenous food practices"
+      ]
+    },
+    "background": {
+      "title": "Background",
+      "paragraphs": [
+        "Over the past decade, gastronomy has emerged as a powerful catalyst for tourism development, cultural preservation, economic diversification, and social inclusion across Africa and the world. Governments, development agencies, tourism authorities, and private sector stakeholders increasingly recognize food as a strategic asset capable of creating jobs, stimulating local economies, strengthening value chains, and promoting national identity on the global stage.",
+        "The International Forum of African Gastronomy (FIGA) has been at the forefront of this agenda, creating platforms that celebrate Africa's rich culinary heritage while fostering innovation, professional development, and cross-border collaboration.",
+        "Building on this momentum, FIGA Botswana 2026 will create opportunities for knowledge exchange, investment, tourism promotion, and cultural diplomacy, bringing together chefs, hospitality professionals, policymakers, investors, educators, producers, development partners, and cultural practitioners from Africa and beyond."
+      ],
+      "trackRecordTitle": "Building on Previous Editions"
+    },
+    "outcomes": {
+      "title": "Expected Outcomes"
+    },
+    "conclusion": {
+      "title": "More Than an Event",
+      "text": "FIGA Botswana 2026 is a strategic platform for economic transformation, tourism growth, cultural diplomacy, and skills development. By bringing together government, industry, investors, chefs, entrepreneurs, and development partners, the forum will position Botswana as Africa's premier destination where gastronomy, tourism, culture, and business converge — leaving a legacy of strengthened partnerships, empowered entrepreneurs, enhanced destination competitiveness, and sustainable economic opportunities for communities across Botswana."
+    }
   },
   "gastronomy": {
-    "hero": { "kicker": "African Gastronomy", "title": "A Continent of Flavour" },
-    "heritage": { "title": "Botswana's Culinary Heritage", "text": "Botswana's cuisine reflects its land and its people — from seswaa and bogobe to morogo and dried mopane worms, each dish carries the story of community, resilience and celebration." },
-    "traditional": { "title": "Traditional Cuisine", "text": "Across the continent, traditional cooking techniques — open-fire grilling, slow stewing, fermentation and communal preparation — remain at the heart of African gastronomy." },
-    "ingredients": { "title": "Indigenous Ingredients", "text": "Sorghum, millet, indigenous greens, wild fruits and free-range meats form the backbone of dishes that are as nutritious as they are flavourful." },
-    "initiatives": { "title": "African Gastronomy Initiatives", "text": "FIGA Botswana champions initiatives that document, preserve and elevate African culinary traditions — from community cookbooks to chef mentorship programmes." }
+    "hero": {
+      "kicker": "African Gastronomy",
+      "title": "Driving Tourism, Culture, Food Security and Economic Development"
+    },
+    "heritage": {
+      "title": "Botswana's Culinary Heritage",
+      "text": "Botswana is home to a rich and diverse culinary heritage rooted in indigenous ingredients, traditional food systems, and the cultural identities of its many communities. From premium Botswana beef and sorghum to wild foods, traditional beverages, and regional culinary traditions, Botswana possesses authentic food experiences capable of complementing its world-renowned wildlife and cultural tourism products."
+    },
+    "traditional": {
+      "title": "Why Botswana",
+      "text": "Globally recognised for its political stability, conservation leadership, premium tourism offerings, and sound economic governance, Botswana is well positioned to become a leading destination for gastronomy and culinary tourism. FIGA Botswana 2026 will showcase gastronomy as an integral component of the visitor experience — contributing to destination diversification, increased visitor spending, rural enterprise development, and the promotion of Botswana's cultural identity."
+    },
+    "ingredients": {
+      "title": "Africa on the World Stage",
+      "text": "While global gastronomy continues to evolve and gain recognition, African cuisine remains underrepresented on the world stage, despite its diversity, depth, and ancestral richness. Africa Gastronomique is undertaking a bold initiative to elevate and professionalize African gastronomy — particularly Botswana cuisine — through education, innovation, and cultural celebration."
+    },
+    "initiatives": {
+      "title": "A Catalyst for Development",
+      "text": "Gastronomy creates jobs, stimulates local economies, strengthens value chains, and promotes national identity. Through conferences, masterclasses, competitions, exhibitions, B2B engagements, cultural showcases, and investment dialogues, the forum will support economic diversification, local enterprises, job creation, and stronger food systems."
+    }
   },
   "chefsPage": {
-    "hero": { "kicker": "Our Chefs & Speakers", "title": "Meet the Culinary Leaders of FIGA Botswana" },
-    "intro": "Chef and speaker profiles will be announced progressively as FIGA Botswana 2026 approaches. Each profile will include a photograph, biography, areas of expertise and achievements.",
-    "placeholderRole": "Chef Profile",
-    "cta": "Apply to Speak or Compete"
+    "hero": {
+      "kicker": "Our Chefs",
+      "title": "Meet the Chefs of Africa Gastronomique"
+    },
+    "intro": "Chefs from Botswana and across the Africa Gastronomique network, as presented in the FIGA Botswana 2026 sponsoring dossier.",
+    "cta": "Get in Touch"
   },
   "programmesPage": {
-    "hero": { "kicker": "Programmes & Competitions", "title": "The FIGA Botswana 2026 Programme" },
-    "intro": "Explore masterclasses, flagship competitions and exhibition opportunities. Full schedules and judging criteria will be published as they are confirmed.",
-    "categoriesTitle": "Registration Categories",
-    "tabs": { "masterclasses": "Masterclasses", "competitions": "Competitions", "exhibitions": "Exhibition Stalls" }
+    "hero": {
+      "kicker": "Programmes & Competitions",
+      "title": "The FIGA Botswana 2026 Programme"
+    },
+    "intro": "Masterclasses, culinary competitions and the Exhibition & Trade Fair at FIGA Botswana 2026. See the Event Calendar for the full timetable.",
+    "categoriesTitle": "Sponsorship & Exhibition Packages",
+    "tabs": {
+      "masterclasses": "Masterclasses",
+      "competitions": "Competitions",
+      "exhibitions": "Exhibition Stalls"
+    }
   },
   "galleryPage": {
-    "hero": { "kicker": "Gallery", "title": "Flavours, Faces & Moments" },
-    "filters": { "all": "All", "food": "Food", "kitchen": "Behind the Scenes", "events": "Events" }
+    "hero": {
+      "kicker": "Gallery",
+      "title": "Flavours, Faces & Moments"
+    },
+    "filters": {
+      "all": "All",
+      "food": "Food",
+      "kitchen": "Behind the Scenes",
+      "events": "Events",
+      "uganda": "Uganda Challenge 2026"
+    }
   },
   "partnersPage": {
-    "hero": { "kicker": "Partners & Sponsors", "title": "Our Partners & Sponsors" },
-    "intro": "FIGA Botswana 2026 is proud to work alongside partner organisations, supporting institutions and sponsors who champion African gastronomy.",
-    "tiers": { "title": "Sponsorship Tiers", "text": "Sponsorship packages are available across multiple tiers, offering visibility, hospitality and activation opportunities throughout the event." },
-    "portalCta": "Sponsor Portal — Coming Soon",
-    "becomePartner": "Become a Partner"
+    "hero": {
+      "kicker": "Partners & Sponsors",
+      "title": "Our Partners & Sponsors"
+    },
+    "intro": "FIGA Botswana 2026 is endorsed by the Botswana Tourism Organisation and welcomes sponsors and exhibitors who champion African gastronomy.",
+    "endorsement": {
+      "title": "Endorsed by the Botswana Tourism Organisation",
+      "text": "In a letter dated 12 August 2026 (Ref. BTO 1/2/5/2), signed by Justice Ofentse, Acting Chief Executive Officer, BTO endorsed the First International Gastronomy and Culinary Arts (FIGA) Botswana 2026 and committed to in-kind assistance and publicity support. This includes promotion through BTO's communication and marketing platforms, sharing event information through its digital channels and stakeholder networks, technical guidance on tourism-related aspects, and facilitation of linkages with tourism stakeholders and industry partners."
+    },
+    "tiers": {
+      "title": "Sponsorship Packages",
+      "text": "From Bronze (P25,000+) to Diamond (P750,000+), plus exhibition options from P5,000+. All amounts in Botswana Pula."
+    },
+    "strategicTitle": "Strategic Partners",
+    "becomePartner": "Become a Partner",
+    "dossierCta": "Download the Sponsoring Dossier"
   },
   "countriesPage": {
-    "hero": { "kicker": "Participating Countries", "title": "United Across the Continent" },
-    "intro": "Delegations, chefs and exhibitors from across Africa — and friends of African gastronomy worldwide — are joining FIGA Botswana 2026."
+    "hero": {
+      "kicker": "Participating Countries",
+      "title": "United Across the Continent"
+    },
+    "intro": "FIGA Botswana 2026 targets 20 African countries. Africa Gastronomique is present in 26 African countries, with its network shown below."
   },
   "calendarPage": {
-    "hero": { "kicker": "Event Calendar", "title": "FIGA Botswana 2026 Schedule" },
-    "intro": "A day-by-day look at masterclasses, competitions and signature events across the four days of FIGA Botswana 2026."
+    "hero": {
+      "kicker": "Event Calendar",
+      "title": "FIGA Botswana 2026 Schedule"
+    },
+    "intro": "The full four-day timetable of FIGA Botswana 2026, from the Opening Ceremony on 11 November to the Gala Dinner on 14 November."
   },
   "dashboardPage": {
-    "hero": { "kicker": "Interactive Dashboard", "title": "FIGA Botswana 2026 at a Glance" },
-    "intro": "Live-style overview of registrations, countries and programme activity — connected to real data as the CMS is populated."
+    "hero": {
+      "kicker": "Targets & Impact",
+      "title": "FIGA Botswana 2026 at a Glance"
+    },
+    "intro": "Participation targets, impact indicators and expected outcomes for the forum, as set out in the sponsoring dossier."
   },
   "contactPage": {
-    "hero": { "kicker": "Contact / FAQ", "title": "Get in Touch" },
+    "hero": {
+      "kicker": "Contact / FAQ",
+      "title": "Get in Touch"
+    },
     "formTitle": "Send Us a Message",
     "form": {
       "name": "Full Name",
@@ -258,5 +380,20 @@
       "cta": "Back to Home"
     },
     "back": "Back"
+  },
+  "uganda": {
+    "kicker": "Africa Gastronomique in Uganda",
+    "hero": {
+      "kicker": "Africa Gastronomique · Uganda",
+      "title": "2nd Hospitality Skills Challenge 2026"
+    },
+    "intro": "8–11 September 2026 at HTTC Campus Jinja, Uganda. Theme: Fusion of Culture. Photos and films from an Africa Gastronomique event held ahead of FIGA Botswana 2026.",
+    "note": "Films and photographs of the 2nd Hospitality Skills Challenge 2026, held in Uganda. This event is separate from FIGA Botswana 2026.",
+    "videosTitle": "Films",
+    "foodTitle": "On the Plate",
+    "foodText": "Pastries, breads, plated dishes and centrepieces from the competition kitchens.",
+    "momentsTitle": "Moments from the Challenge",
+    "momentsText": "Competitors, judges, guests and prize-giving across the three days.",
+    "cta": "See the Challenge"
   }
 }

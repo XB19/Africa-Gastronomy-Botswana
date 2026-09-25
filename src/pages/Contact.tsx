@@ -32,23 +32,32 @@ export default function Contact() {
               <div>
                 <h3 className="font-display text-xl font-semibold text-ink-800">{t("contactPage.detailsTitle")}</h3>
                 <div className="mt-5 flex flex-col gap-4">
-                  <a href="mailto:info@africagastronomybotswana.com" className="flex items-center gap-3 text-ink-600 hover:text-primary-600">
+                  <div className="flex items-center gap-3 text-ink-600">
                     <span className="flex h-10 w-10 items-center justify-center bg-primary-50 text-primary-600">
-                      <FontAwesomeIcon icon={icons.envelope} />
+                      <FontAwesomeIcon icon={icons.userTie} />
                     </span>
-                    info@africagastronomybotswana.com
-                  </a>
-                  <a href="tel:+2670000000" className="flex items-center gap-3 text-ink-600 hover:text-primary-600">
+                    <span>
+                      <span className="block font-semibold text-ink-800">Chef Monana Motswaledi</span>
+                      <span className="block text-sm text-ink-400">President of Africa Gastronomique Botswana</span>
+                    </span>
+                  </div>
+                  <a href="tel:+26772486352" className="flex items-center gap-3 text-ink-600 hover:text-primary-600">
                     <span className="flex h-10 w-10 items-center justify-center bg-primary-50 text-primary-600">
                       <FontAwesomeIcon icon={icons.phone} />
                     </span>
-                    +267 000 0000
+                    +267 72 486 352
+                  </a>
+                  <a href="tel:+26771452085" className="flex items-center gap-3 text-ink-600 hover:text-primary-600">
+                    <span className="flex h-10 w-10 items-center justify-center bg-primary-50 text-primary-600">
+                      <FontAwesomeIcon icon={icons.phone} />
+                    </span>
+                    +267 71 452 085
                   </a>
                   <div className="flex items-center gap-3 text-ink-600">
                     <span className="flex h-10 w-10 items-center justify-center bg-primary-50 text-primary-600">
                       <FontAwesomeIcon icon={icons.location} />
                     </span>
-                    Gaborone International Convention Centre, Gaborone, Botswana
+                    Gaborone, Botswana · 11–14 November 2026
                   </div>
                 </div>
                 <div className="mt-6 flex gap-3">

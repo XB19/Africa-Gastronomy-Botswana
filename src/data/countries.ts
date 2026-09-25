@@ -1,30 +1,69 @@
-// Placeholder sample list — replace with the confirmed delegation list via
-// the CMS once countries have formally confirmed participation.
+// "delegation": countries of the chefs featured in the FIGA Botswana 2026
+// sponsoring dossier. "network": other countries of the Africa Gastronomique
+// network shown on the dossier's "Our Ancestral Cuisine" flag chart.
 export interface CountryEntry {
   name: string;
   flag: string;
-  status: "confirmed" | "invited";
+  status: "delegation" | "network";
 }
 
+const d = (name: string, flag: string): CountryEntry => ({ name, flag, status: "delegation" });
+const n = (name: string, flag: string): CountryEntry => ({ name, flag, status: "network" });
+
 export const countries: CountryEntry[] = [
-  { name: "Botswana", flag: "🇧🇼", status: "confirmed" },
-  { name: "South Africa", flag: "🇿🇦", status: "confirmed" },
-  { name: "Namibia", flag: "🇳🇦", status: "confirmed" },
-  { name: "Zambia", flag: "🇿🇲", status: "confirmed" },
-  { name: "Zimbabwe", flag: "🇿🇼", status: "confirmed" },
-  { name: "Kenya", flag: "🇰🇪", status: "invited" },
-  { name: "Nigeria", flag: "🇳🇬", status: "invited" },
-  { name: "Ghana", flag: "🇬🇭", status: "invited" },
-  { name: "Tanzania", flag: "🇹🇿", status: "invited" },
-  { name: "Mozambique", flag: "🇲🇿", status: "invited" },
-  { name: "Ethiopia", flag: "🇪🇹", status: "invited" },
-  { name: "Senegal", flag: "🇸🇳", status: "invited" },
-  { name: "Rwanda", flag: "🇷🇼", status: "invited" },
-  { name: "Angola", flag: "🇦🇴", status: "invited" },
-  { name: "Malawi", flag: "🇲🇼", status: "invited" },
-  { name: "Mauritius", flag: "🇲🇺", status: "invited" },
-  { name: "Uganda", flag: "🇺🇬", status: "invited" },
-  { name: "Côte d'Ivoire", flag: "🇨🇮", status: "invited" },
-  { name: "Egypt", flag: "🇪🇬", status: "invited" },
-  { name: "Morocco", flag: "🇲🇦", status: "invited" },
+  d("Botswana", "🇧🇼"),
+  d("Cameroon", "🇨🇲"),
+  d("Togo", "🇹🇬"),
+  d("Burkina Faso", "🇧🇫"),
+  d("Uganda", "🇺🇬"),
+  d("Ghana", "🇬🇭"),
+  d("Nigeria", "🇳🇬"),
+  d("Gabon", "🇬🇦"),
+  d("Congo-Brazzaville", "🇨🇬"),
+  d("Benin", "🇧🇯"),
+  d("USA (African Diaspora)", "🇺🇸"),
+  n("Algeria", "🇩🇿"),
+  n("Angola", "🇦🇴"),
+  n("Burundi", "🇧🇮"),
+  n("Cape Verde", "🇨🇻"),
+  n("Central African Republic", "🇨🇫"),
+  n("Chad", "🇹🇩"),
+  n("Comoros", "🇰🇲"),
+  n("Côte d'Ivoire", "🇨🇮"),
+  n("DR Congo", "🇨🇩"),
+  n("Djibouti", "🇩🇯"),
+  n("Egypt", "🇪🇬"),
+  n("Equatorial Guinea", "🇬🇶"),
+  n("Eritrea", "🇪🇷"),
+  n("Eswatini", "🇸🇿"),
+  n("Ethiopia", "🇪🇹"),
+  n("Gambia", "🇬🇲"),
+  n("Guinea", "🇬🇳"),
+  n("Guinea-Bissau", "🇬🇼"),
+  n("Kenya", "🇰🇪"),
+  n("Lesotho", "🇱🇸"),
+  n("Liberia", "🇱🇷"),
+  n("Libya", "🇱🇾"),
+  n("Madagascar", "🇲🇬"),
+  n("Malawi", "🇲🇼"),
+  n("Mali", "🇲🇱"),
+  n("Mauritania", "🇲🇷"),
+  n("Mauritius", "🇲🇺"),
+  n("Morocco", "🇲🇦"),
+  n("Mozambique", "🇲🇿"),
+  n("Namibia", "🇳🇦"),
+  n("Niger", "🇳🇪"),
+  n("Réunion", "🇷🇪"),
+  n("Rwanda", "🇷🇼"),
+  n("São Tomé and Príncipe", "🇸🇹"),
+  n("Senegal", "🇸🇳"),
+  n("Seychelles", "🇸🇨"),
+  n("Sierra Leone", "🇸🇱"),
+  n("Somalia", "🇸🇴"),
+  n("South Africa", "🇿🇦"),
+  n("Sudan", "🇸🇩"),
+  n("Tanzania", "🇹🇿"),
+  n("Tunisia", "🇹🇳"),
+  n("Zambia", "🇿🇲"),
+  n("Zimbabwe", "🇿🇼"),
 ];

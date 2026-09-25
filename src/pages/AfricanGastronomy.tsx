@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icons } from "../lib/icons";
 import { PageHero } from "../components/ui/PageHero";
 import { Container } from "../components/ui/Container";
-import { foodImages, pick } from "../lib/images";
+import { eventPhotos, foodImages, pick } from "../lib/images";
 import { Reveal, Stagger } from "../components/motion";
 
 const sections = [
@@ -21,7 +21,7 @@ export default function AfricanGastronomy() {
       <PageHero
         kicker={t("gastronomy.hero.kicker")}
         title={t("gastronomy.hero.title")}
-        image={pick(foodImages, 9)}
+        image={eventPhotos.fruitCarving}
       />
 
       <section className="py-16 sm:py-20">

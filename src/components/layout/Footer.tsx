@@ -21,6 +21,7 @@ export function Footer() {
     { to: paths.countries, label: t("nav.countries") },
     { to: paths.calendar, label: t("nav.calendar") },
     { to: paths.dashboard, label: t("nav.dashboard") },
+    { to: paths.uganda, label: t("nav.uganda") },
     { to: paths.partners, label: t("nav.partners") },
     { to: paths.contact, label: t("nav.contact") },
   ];
@@ -39,12 +40,12 @@ export function Footer() {
       <Container className="grid grid-cols-1 gap-12 py-16 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="Africa Gastronomy Botswana" className="h-11 w-11" />
+            <img src={logo} alt="Africa Gastronomique Botswana" className="h-11 w-11" />
             <span className="font-display text-base font-bold text-surface-50">FIGA Botswana 2026</span>
           </div>
           <p className="max-w-xs text-sm leading-relaxed text-surface-100/65">{t("footer.address")}</p>
-          <a href={`mailto:${t("footer.email")}`} className="text-sm text-surface-100/65 hover:text-surface-50">
-            {t("footer.email")}
+          <a href="/FIGA-Botswana-2026-Sponsoring-Dossier.pdf" download className="text-sm font-semibold text-primary-400 hover:text-primary-300">
+            {t("common.downloadBrochure")}
           </a>
         </div>
 
@@ -92,15 +93,18 @@ export function Footer() {
               </a>
             ))}
           </div>
-          <a href={`tel:${t("footer.phone")}`} className="mt-5 block text-sm text-surface-100/70 hover:text-surface-50">
+          <a href="tel:+26772486352" className="mt-5 block text-sm text-surface-100/70 hover:text-surface-50">
             {t("footer.phone")}
+          </a>
+          <a href="tel:+26771452085" className="mt-2 block text-sm text-surface-100/70 hover:text-surface-50">
+            {t("footer.phone2")}
           </a>
         </div>
       </Container>
 
       <div className="border-t border-surface-100/10">
         <Container className="flex flex-col items-center justify-between gap-2 py-5 text-xs text-surface-100/55 sm:flex-row">
-          <span>© {new Date().getFullYear()} Africa Gastronomy Botswana. {t("footer.rights")}</span>
+          <span>© {new Date().getFullYear()} Africa Gastronomique Botswana. {t("footer.rights")}</span>
           <span>{t("meta.eventName")} · {t("meta.dates")} · {t("meta.location")}</span>
         </Container>
       </div>

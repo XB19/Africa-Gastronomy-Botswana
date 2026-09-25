@@ -6,89 +6,91 @@ export interface Programme {
   title: string;
   description: string;
   day: string;
+  time: string;
   icon: "chef-hat" | "trophy" | "store" | "utensils" | "wine-glass" | "seedling";
 }
 
 export const programmes: Programme[] = [
   {
-    id: "mc-indigenous-ingredients",
+    id: "mc-african-cuisine-innovation",
     type: "masterclass",
-    title: "Indigenous Ingredients Masterclass",
-    description:
-      "A hands-on session exploring sorghum, millet, morogo and other indigenous ingredients with leading chefs.",
-    day: "Day 1 · 11 Nov",
-    icon: "seedling",
-  },
-  {
-    id: "mc-modern-african-plating",
-    type: "masterclass",
-    title: "Modern African Plating",
-    description:
-      "Contemporary plating techniques applied to traditional Southern African dishes.",
+    title: "African Cuisine Innovation",
+    description: "Part of the Masterclass Series of the Pan-African Gastronomy Conference, Innovation & Skills Development day.",
     day: "Day 2 · 12 Nov",
-    icon: "utensils",
-  },
-  {
-    id: "mc-pastry-baking",
-    type: "masterclass",
-    title: "African Pastry & Baking",
-    description:
-      "From steamed breads to modern patisserie inspired by African flavours.",
-    day: "Day 2 · 12 Nov",
+    time: "11:00 – 13:00",
     icon: "chef-hat",
   },
   {
-    id: "cp-national-chef-challenge",
-    type: "competition",
-    title: "National Chef Challenge",
-    description:
-      "Botswana's top chefs compete for the national title in a live cook-off judged by an international panel.",
-    day: "Day 1 · 11 Nov",
-    icon: "trophy",
-  },
-  {
-    id: "cp-pan-african-team",
-    type: "competition",
-    title: "Pan-African Team Competition",
-    description:
-      "Teams representing participating countries showcase signature dishes rooted in national heritage.",
-    day: "Day 3 · 13 Nov",
-    icon: "trophy",
-  },
-  {
-    id: "cp-young-chefs",
-    type: "competition",
-    title: "Young Chefs of Africa",
-    description:
-      "A competition spotlighting emerging culinary talent aged 18–25 from across the continent.",
+    id: "mc-food-styling",
+    type: "masterclass",
+    title: "Food Styling",
+    description: "Part of the Masterclass Series of the Pan-African Gastronomy Conference, Innovation & Skills Development day.",
     day: "Day 2 · 12 Nov",
+    time: "11:00 – 13:00",
+    icon: "utensils",
+  },
+  {
+    id: "mc-personal-branding",
+    type: "masterclass",
+    title: "Personal Branding for Culinary Professionals",
+    description: "Part of the Masterclass Series, and of the Day 1 B2B networking sessions, for chefs and culinary professionals.",
+    day: "Day 2 · 12 Nov",
+    time: "11:00 – 13:00",
+    icon: "seedling",
+  },
+  {
+    id: "cp-young-african-chef",
+    type: "competition",
+    title: "Young African Chef Challenge",
+    description: "A culinary competition for young African chefs, forming part of the Day 3 competition programme.",
+    day: "Day 3 · 13 Nov",
+    time: "08:00 – 10:30",
     icon: "trophy",
   },
   {
-    id: "ex-producers-market",
-    type: "exhibition",
-    title: "Producers & Ingredients Market",
-    description:
-      "Local and regional producers showcase indigenous ingredients, spices and artisanal products.",
-    day: "Day 1–4",
-    icon: "store",
+    id: "cp-inter-hotel",
+    type: "competition",
+    title: "Local Inter Hotel Culinary Competition",
+    description: "Botswana hotels compete in a local inter-hotel culinary competition.",
+    day: "Day 3 · 13 Nov",
+    time: "11:00 – 12:30",
+    icon: "trophy",
   },
   {
-    id: "ex-brand-activations",
+    id: "cp-african-fusion",
+    type: "competition",
+    title: "African Fusion Culinary Competition",
+    description: "A Day 4 competition celebrating African fusion cuisine, ahead of the Gala Dinner and Awards Ceremony.",
+    day: "Day 4 · 14 Nov",
+    time: "08:00 – 10:30",
+    icon: "trophy",
+  },
+  {
+    id: "cp-plant-based",
+    type: "competition",
+    title: "Plant Based Challenge",
+    description: "A Day 4 competition dedicated to plant-based cooking.",
+    day: "Day 4 · 14 Nov",
+    time: "11:00 – 12:30",
+    icon: "seedling",
+  },
+  {
+    id: "ex-trade-fair",
     type: "exhibition",
-    title: "Brand & Partner Activations",
-    description:
-      "Exhibition stalls for hospitality brands, equipment suppliers and culinary institutions.",
-    day: "Day 1–4",
+    title: "Exhibition & Trade Fair",
+    description: "Open throughout the day: producers, SMEs, hospitality and tourism businesses engage directly with delegates, buyers and investors.",
+    day: "Day 3 · 13 Nov",
+    time: "Open all day",
     icon: "store",
   },
   {
     id: "ex-gala-dinner",
     type: "exhibition",
-    title: "Closing Gala Dinner",
+    title: "African Gastronomy Gala Dinner & Awards Ceremony",
     description:
-      "A signature evening celebrating African flavours, closing FIGA Botswana 2026 in style.",
+      "Red carpet reception, keynote addresses, the Gala Dinner, awards and recognition, and a closing toast.",
     day: "Day 4 · 14 Nov",
+    time: "18:30 – 22:30",
     icon: "wine-glass",
   },
 ];
