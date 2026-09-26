@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  /* Institutional palette in the spirit of UN Tourism: a clear UN blue as
-     the single accent, deep navy for text and dark sections, white and
-     cool light-grey surfaces. */
-  --color-primary-50: #ebf5fc;
-  --color-primary-100: #d3e9f8;
-  --color-primary-200: #a8d3f1;
-  --color-primary-300: #6fb6e6;
-  --color-primary-400: #3396d8;
-  --color-primary-500: #0077c8;
-  --color-primary-600: #0062a8;
-  --color-primary-700: #004e87;
-  --color-primary-800: #003c69;
-  --color-primary-900: #002c4f;
+  /* Brand palette derived from the logo's orange (#EA966C, primary-400), with
+     deeper tones for buttons and text, deep navy for text and dark sections,
+     white and light surfaces. */
+  --color-primary-50: #fef5ef;
+  --color-primary-100: #fce9de;
+  --color-primary-200: #f8d4c0;
+  --color-primary-300: #f2b597;
+  --color-primary-400: #ea966c;
+  --color-primary-500: #de7a45;
+  --color-primary-600: #c4622f;
+  --color-primary-700: #9f4c24;
+  --color-primary-800: #7a391b;
+  --color-primary-900: #532713;
 
   --color-ink-50: #f4f6f9;
   --color-ink-100: #e6eaf0;
