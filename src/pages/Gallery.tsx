@@ -4,12 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icons } from "../lib/icons";
 import { PageHero } from "../components/ui/PageHero";
 import { Container } from "../components/ui/Container";
-import { eventGallery, foodImages, kitchenImages, pick, ugandaChallenge, ugandaFood } from "../lib/images";
+import { botswanaGallery, eventGallery, foodImages, kitchenImages, pick, ugandaChallenge, ugandaFood } from "../lib/images";
 import { AnimatePresence, motion } from "framer-motion";
 import { Stagger } from "../components/motion";
 import { EASE } from "../components/motion/ease";
 
-type Filter = "all" | "food" | "kitchen" | "events" | "uganda";
+type Filter = "all" | "botswana" | "food" | "kitchen" | "events" | "uganda";
 
 export default function Gallery() {
   const { t } = useTranslation();
@@ -19,15 +19,17 @@ export default function Gallery() {
   const items = useMemo(() => {
     const food = foodImages.map((src) => ({ src, category: "food" as const }));
     const kitchen = kitchenImages.map((src) => ({ src, category: "kitchen" as const }));
+    const botswana = botswanaGallery.map((src) => ({ src, category: "botswana" as const }));
     const events = eventGallery.map((src) => ({ src, category: "events" as const }));
     const uganda = [...ugandaChallenge, ...ugandaFood].map((src) => ({ src, category: "uganda" as const }));
-    const all = [...events, ...uganda, ...food, ...kitchen];
+    const all = [...botswana, ...events, ...uganda, ...food, ...kitchen];
     if (filter === "all") return all;
     return all.filter((i) => i.category === filter);
   }, [filter]);
 
   const filters: { key: Filter; labelKey: string }[] = [
     { key: "all", labelKey: "galleryPage.filters.all" },
+    { key: "botswana", labelKey: "galleryPage.filters.botswana" },
     { key: "food", labelKey: "galleryPage.filters.food" },
     { key: "kitchen", labelKey: "galleryPage.filters.kitchen" },
     { key: "events", labelKey: "galleryPage.filters.events" },
@@ -71,6 +73,7 @@ export default function Gallery() {
                 <img
                   src={item.src}
                   alt=""
+                  loading="lazy"
                   className="w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
                 />
                 <span className="absolute inset-0 flex items-center justify-center bg-primary-900/0 text-white opacity-0 transition-all duration-500 group-hover:bg-primary-900/35 group-hover:opacity-100">

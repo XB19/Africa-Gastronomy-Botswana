@@ -5,6 +5,7 @@ export const paths = {
   chefs: "/chefs-speakers",
   programmes: "/programmes-competitions",
   gallery: "/gallery",
+  botswana: "/figa-botswana-2026-highlights",
   partners: "/partners-sponsors",
   countries: "/participating-countries",
   calendar: "/event-calendar",

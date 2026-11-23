@@ -80,3 +80,29 @@ const ugandaChallengeModules = import.meta.glob("../assets/uganda/challenge/*.jp
 // Photographs of the 2nd Hospitality Skills Challenge 2026 (HTTC Campus Jinja, Uganda).
 export const ugandaFood: string[] = sortedValues(ugandaFoodModules);
 export const ugandaChallenge: string[] = sortedValues(ugandaChallengeModules);
+
+const botswanaModules = import.meta.glob("../assets/botswana/*.jpg", {
+  eager: true,
+  query: "?url",
+  import: "default",
+}) as Record<string, string>;
+
+function botswanaDay(day: number): string[] {
+  return Object.keys(botswanaModules)
+    .filter((key) => key.includes(`/d${day}-`))
+    .sort()
+    .map((key) => botswanaModules[key]);
+}
+
+// Official photographs of FIGA Botswana 2026 (Gaborone, 11–14 November 2026),
+// grouped by festival day. Files are named d<day>-<nn>.jpg.
+export const botswanaDays: string[][] = [1, 2, 3, 4].map(botswanaDay);
+export const botswanaGallery: string[] = botswanaDays.flat();
+
+export const botswanaHighlights = {
+  flags: botswanaDays[0][15],
+  plate: botswanaDays[1][31],
+  panel: botswanaDays[2][9],
+  gala: botswanaDays[3][24],
+  award: botswanaDays[3][38],
+};

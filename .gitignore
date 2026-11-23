@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 .vercel
+
+# Raw photo archives (source files, too large for the repo)
+PHOTOS/

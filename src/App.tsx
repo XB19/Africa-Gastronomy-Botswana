@@ -15,6 +15,7 @@ import Countries from "./pages/Countries";
 import CalendarPage from "./pages/Calendar";
 import DashboardPage from "./pages/Dashboard";
 import UgandaChallenge from "./pages/UgandaChallenge";
+import BotswanaHighlights from "./pages/BotswanaHighlights";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -44,6 +45,7 @@ export default function App() {
               <Route path={paths.dashboard} element={<DashboardPage />} />
               <Route path={paths.contact} element={<Contact />} />
               <Route path={paths.uganda} element={<UgandaChallenge />} />
+              <Route path={paths.botswana} element={<BotswanaHighlights />} />
   
               <Route path={paths.register} element={<RegisterProgramme />} />
               <Route path={paths.registerDetails} element={<RegisterDetails />} />

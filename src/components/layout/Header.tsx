@@ -54,6 +54,7 @@ export function Header() {
     { to: paths.countries, label: t("nav.countries") },
     { to: paths.calendar, label: t("nav.calendar") },
     { to: paths.dashboard, label: t("nav.dashboard") },
+    { to: paths.botswana, label: t("nav.botswana") },
     { to: paths.uganda, label: t("nav.uganda") },
   ];
 
@@ -202,6 +203,7 @@ export function Header() {
                     { to: paths.countries, label: t("nav.countries") },
                     { to: paths.calendar, label: t("nav.calendar") },
                     { to: paths.dashboard, label: t("nav.dashboard") },
+                    { to: paths.botswana, label: t("nav.botswana") },
                     { to: paths.uganda, label: t("nav.uganda") },
                     { to: paths.gallery, label: t("nav.gallery") },
                     { to: paths.partners, label: t("nav.partners") },

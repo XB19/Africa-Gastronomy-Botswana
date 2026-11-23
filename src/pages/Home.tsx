@@ -7,6 +7,7 @@ import { CountriesSection } from "../sections/home/CountriesSection";
 import { ChefsPreview } from "../sections/home/ChefsPreview";
 import { DashboardSection } from "../sections/home/DashboardSection";
 import { UgandaSection } from "../sections/home/UgandaSection";
+import { BotswanaSection } from "../sections/home/BotswanaSection";
 import { GalleryPreview } from "../sections/home/GalleryPreview";
 import { PartnersSection } from "../sections/home/PartnersSection";
 import { RegisterCta } from "../sections/home/RegisterCta";
@@ -22,6 +23,7 @@ export default function Home() {
       <CountriesSection />
       <ChefsPreview />
       <DashboardSection />
+      <BotswanaSection />
       <UgandaSection />
       <GalleryPreview />
       <PartnersSection />

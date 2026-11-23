@@ -4,12 +4,12 @@ import { Container } from "../../components/ui/Container";
 import { SectionHeading } from "../../components/ui/SectionHeading";
 import { LinkButton } from "../../components/ui/Button";
 import { paths } from "../../router/paths";
-import { foodImages, pick } from "../../lib/images";
+import { botswanaGallery, pick } from "../../lib/images";
 import { Stagger } from "../../components/motion";
 
 export function GalleryPreview() {
   const { t } = useTranslation();
-  const images = Array.from({ length: 8 }).map((_, i) => pick(foodImages, i + 8));
+  const images = Array.from({ length: 8 }).map((_, i) => pick(botswanaGallery, [31, 54, 120, 60, 96, 4, 128, 75][i]));
 
   return (
     <section className="bg-surface-200/50 py-16 sm:py-20">
@@ -34,7 +34,7 @@ export function GalleryPreview() {
             >
               <img
                 src={src}
-                alt="Africa Gastronomy dish"
+                alt="FIGA Botswana 2026"
                 className="h-full max-h-72 w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
               />
               <div className="pointer-events-none absolute inset-0 bg-primary-900/0 transition-colors duration-500 group-hover:bg-primary-900/25" />

@@ -17,6 +17,7 @@
     "calendar": "Event Calendar",
     "dashboard": "Dashboard",
     "gallery": "Gallery",
+    "botswana": "FIGA 2026 Highlights",
     "uganda": "Uganda Challenge",
     "partners": "Partners & Sponsors",
     "contact": "Contact / FAQ",
@@ -271,6 +272,7 @@
     },
     "filters": {
       "all": "All",
+      "botswana": "FIGA Botswana 2026",
       "food": "Food",
       "kitchen": "Behind the Scenes",
       "events": "Events",
@@ -395,5 +397,40 @@
     "momentsTitle": "Moments from the Challenge",
     "momentsText": "Competitors, judges, guests and prize-giving across the three days.",
     "cta": "See the Challenge"
+  },
+  "botswana": {
+    "kicker": "FIGA Botswana 2026 · Highlights",
+    "hero": {
+      "kicker": "Gaborone · 11–14 November 2026",
+      "title": "FIGA Botswana 2026 in Pictures"
+    },
+    "intro": "Four days of competitions, masterclasses, panels and celebration at the first International Forum of African Gastronomy in Gaborone.",
+    "cta": "See all the photos",
+    "dayLabel": "Day {{day}}",
+    "photoCount": "{{count}} photos",
+    "days": [
+      {
+        "title": "Welcome & Tasting",
+        "text": "Delegations arrive, flags of the participating nations go up and guests share a first taste of Botswana cuisine."
+      },
+      {
+        "title": "Competitions & Showcase",
+        "text": "Indigenous produce on display, crafts from local artisans, and young chefs competing under the eyes of the jury."
+      },
+      {
+        "title": "Panels, Masterclasses & Plating",
+        "text": "Panel discussions on culinary tourism, masterclass sessions and the plated dishes of the inter-hotel competition."
+      },
+      {
+        "title": "Culinary Tour & Gala Night",
+        "text": "A visit to a culinary school, the African Fusion kitchen challenge, then the gala dinner and awards ceremony."
+      }
+    ],
+    "strip": {
+      "flags": "Nations Together",
+      "plate": "On the Plate",
+      "panel": "Panels & Debates",
+      "gala": "Gala & Awards"
+    }
   }
 }
