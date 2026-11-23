@@ -27,3 +27,5 @@ dist-ssr
 
 # Raw photo archives (source files, too large for the repo)
 PHOTOS/
+
+.env*
